@@ -1,6 +1,6 @@
 import { ProjectsNavigation } from './ProjectsNavigation.tsx';
-import { ProjectsContainer } from './ProjectsContainer.tsx';
-import { PaperCanvas } from './PaperCanvas.tsx';
+import { ProjectsContainer } from './ProjectsContainer.jsx';
+import { PaperCanvas } from './PaperCanvas.jsx';
 import { TYPE_CONFIGS } from './data/constants.ts';
 import { useState } from 'react';
 import './style.css'
@@ -8,8 +8,8 @@ import './style.css'
 function App() {
 
   const [filter, setFilter] = useState("");
-  const handleNavigationClick = (event: React.MouseEvent) => {
-    const id = (event.target as HTMLElement).id;
+  const handleNavigationClick = (event) => {
+    const id = event.target.id;
     if (Object.keys(TYPE_CONFIGS).includes(id)) {
       setFilter(filter == id ? "" : id);
     } else if (id === "title") {
@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="container" onClick={handleNavigationClick}>
-      <PaperCanvas id="paper-canvas" filter={filter} />
-      <div id="title" className="fade-in">Vicky Bilbily</div>
+      <PaperCanvas filter={filter} />
+      <div className="title fade-in">Vicky Bilbily</div>
       <ProjectsNavigation filter={filter} />
       <ProjectsContainer filter={filter} />
     </div>
