@@ -1,0 +1,56 @@
+@import '../colors.css';
+
+.tagContainer {
+  padding-top: 20px;
+  display: flex;
+  padding-top: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+ }
+
+.tag {
+  float: left;
+
+  display: block;
+  border-radius: 15px;
+  border-width: 3px;
+  border-style: solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: var(--off-white);
+}
+
+.small {
+    font-size: 12pt;
+}
+
+.big {
+    font-size: 20pt;
+}
+
+.programming {
+    border-color: var(--programming-color);
+    color: var(--programming-color)
+}
+
+.ux {
+    border-color: var(--ux-color);
+    color: var(--ux-color)
+}
+
+.game {
+    border-color: var(--game-color);
+    color: var(--game-color);
+}
+
+.education {
+    border-color: var(--education-color);
+    color: var(--education-color);
+}
+
+.art {
+    border-color: var(--art-color);
+    color: var(--art-color);
+}

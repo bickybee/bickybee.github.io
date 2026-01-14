@@ -20,3 +20,11 @@ export const TYPE_CONFIGS = {
     color: "#9538ec"
   }
 }
+
+export const THEMES = {
+  FLOAT: 0,
+  CURSOR: 1,
+  NONE: 2
+}
+
+export const THEME_NAMES = ['Float', 'Cursor', 'None'];

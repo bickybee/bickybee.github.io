@@ -1,0 +1,61 @@
+header {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 30px 60px 30px 60px;
+    box-sizing: border-box;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 13pt;
+    background-color: transparent;
+}
+
+.left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:10px;
+  font-size: 16pt;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  cursor: pointer;
+  transition: transform 0.2s;
+  pointer-events: auto;
+}
+
+.logo > img:hover {
+    transform: scale(2);
+    transition: transform 0.2s;
+}
+
+.ux {
+    background-color: var(--ux-color);
+}
+
+.art {
+    background-color: var(--art-color);
+}
+
+.game {
+    background-color: var(--game-color);
+}
+
+.education {
+    background-color: var(--education-color);
+}
+
+.programming {
+    background-color: var(--programming-color);
+}

@@ -1,0 +1,43 @@
+@import '../colors.css';
+
+.title {
+  font-size: 70pt;
+  text-align: center;
+  font-family: 'Solway';
+  font-weight: 500;
+  color:#333;
+}
+
+.container {
+  width: 70%;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: grid;
+  gap: 20px;
+  grid-template-rows: auto;
+  justify-items: center;
+  overflow-wrap: normal;
+}
+
+.subtitle {
+  font-size: 24pt;
+  text-align: center;
+  font-family: 'Solway';
+  font-weight: 400;
+  color:#383838;
+  padding-left: 50px;
+  padding-right:50px;
+}
+
+.content {
+  max-width: 100%;
+  background-color: var(--off-white-transparent);
+  border-radius: 10px;
+  font-size: 15pt;
+  color:#333;
+}
+
+a, a:visited, a:active {
+  color:#343434;
+}

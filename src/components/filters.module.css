@@ -1,0 +1,33 @@
+@import '../colors.css';
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  pointer-events: none;
+  margin-top: 40px;
+}
+
+.programming {
+    background-color: var(--programming-color);
+}
+
+.ux {
+    background-color: var(--ux-color);
+}
+
+.art {
+    background-color: var(--art-color);
+}
+
+.game {
+    background-color: var(--game-color);
+}
+
+.education {
+    background-color: var(--education-color);
+}
+
+.unselected {
+  background-color: #bbb;
+}

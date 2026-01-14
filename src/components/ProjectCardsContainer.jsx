@@ -1,13 +1,14 @@
-import { PROJECTS } from './data/projects';
-import { Project } from './Project.jsx';
 import { useState } from 'react';
+import { PROJECTS } from '../data/projects.js';
+import { ProjectCard } from './components.js';
+import styles from './projectCard.module.css'
 
-export function ProjectsContainer(props) {
+export function ProjectCardsContainer(props) {
 
   const allProjects = PROJECTS.filter(project => {
     return props.filter === "" || project.tags.includes(props.filter)
   }).map(project =>
-    <Project {...project} filter={props.filter} key={project.id} />
+    <ProjectCard {...project} filter={props.filter} key={project.id} />
   );
 
   const [filter, setFilter] = useState("");
@@ -16,7 +17,7 @@ export function ProjectsContainer(props) {
   }
 
   return (
-    <div className="projects-container">
+    <div className={styles.projectsContainer}>
         { allProjects }
     </div>
   );

@@ -1,0 +1,106 @@
+@import './colors.css';
+
+body {
+  background: var(--off-white);
+  font-family: 'Varela Round';
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  color:#333;
+  scrollbar-gutter: both-edges;
+}
+
+#root {
+  height: 100dvh;
+}
+
+html {
+  min-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.content-wrapper {
+  margin-left: 15%;
+  margin-right: 15%;
+  flex-grow: 1;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.button {
+  border-radius: 155px;
+  font-family: "Solway";
+  font-size: 15pt;
+  vertical-align: middle;
+  color: white;
+  background-color: rgb(177, 177, 177);
+  border-width: 0;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  pointer-events: auto;
+}
+
+.button.-wfp-hover,
+.button:hover {
+  transform: scale(1.10);
+  transition: transform 0.2s;
+}
+
+.fade-in {
+  height: 100%;
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

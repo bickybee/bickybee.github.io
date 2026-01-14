@@ -1,0 +1,22 @@
+@import '../colors.css';
+
+.title {
+  font-size: 85pt;
+  text-align: center;
+  font-family: 'Solway';
+  font-weight: 500;
+  color:#333;
+}
+
+.subtitle {
+  font-size: 24pt;
+  text-align: center;
+  font-family: 'Solway';
+  font-weight: 400;
+  color:#383838;
+  width: 100%;
+}
+
+.hero {
+  margin-bottom:30px;
+}
