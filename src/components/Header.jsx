@@ -9,9 +9,9 @@ export function Header(props){
             <Link to="/"><img src="/logo2.png" alt="Vicky Bilbily Logo" width="200px" className={styles.logo} id="logo"/></Link>
             <div className={styles.right}>
                 <Link to="/">Home</Link>
-                <Link to="/">About</Link>
+                <Link to="/about">About</Link>
                 <Link to="/">Contact</Link>
-                <Link to="/">Resume</Link>
+                <a href="Vicky_Bilbily_Resume.pdf">Resume</a>
                 <ThemeButton />
             </div>
         </header>

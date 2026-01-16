@@ -21,9 +21,6 @@
   cursor: pointer;
   pointer-events: auto;
   background-color: var(--off-white-transparent);
-
-  animation-timeline: view();
-  animation-range: entry;
 }
 
 .projectBlock:hover{

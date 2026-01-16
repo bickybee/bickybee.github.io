@@ -1,14 +1,13 @@
-- [ ] project page CSS
-    - [x] organize CSS files
-    - [x] remove title hover anim
-    - [ ] component for listing tools/tech (per category?)
+NEXT UP:
+- [ ] about page
+- [ ] resume page
+- [ ] socials in footer
+- [ ] project page content
+- [ ] logo fix
+
+LATER
+- [ ] project page component for listing tools/tech (per category?)
 - [ ] mobile layout
-- [ ] content!
-- [x] header
-    - [x] theme button
-- [ ] footer
-    - [ ] socials
-- [ ] bubbles
-    - [x] re-randomize colors for trail mode
+- [ ] bubbles improvements
     - [ ] create data type to track bubble's origin regardless of anim
     - [ ] make bubbles interact with cursor motion
