@@ -24,19 +24,13 @@ export function ProjectPage() {
     }, []);
 
     return (
-        <>
-            <div className="page-wrapper">
-                <Header />
-                <div className="content-wrapper">
-                    <div className={styles.title}> {projectData.title} </div>
-                    <div className={styles.subtitle}> {projectData.tagline} </div>
-                    <TagCollection tags={projectData.tags} size="big" align="center"/>
-                    <div className={styles.content + ' fade-in'}>
-                        <Markdown>{projectText}</Markdown>
-                    </div>
-                </div>
+        <div className="content-wrapper">
+            <div className={styles.title}> {projectData.title} </div>
+            <div className={styles.subtitle}> {projectData.tagline} </div>
+            <TagCollection tags={projectData.tags} size="big" align="center"/>
+            <div className={styles.content + ' fade-in'}>
+                <Markdown>{projectText}</Markdown>
             </div>
-            <Footer />
-        </>
+        </div>
     )
 }

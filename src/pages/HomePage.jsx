@@ -8,17 +8,13 @@ export function HomePage(props) {
   const filter = useOutletContext();
 
     return (
-      <>
-        <Header />
-        <div className="content-wrapper">
-          <div className={styles.hero}>
-            <div className={styles.title}>Vicky Bilbily</div>
-            <div className={styles.subtitle}>Multi-disciplinary software developer with strong UX sensibilities.</div>
-            <FilterNavigation filter={filter} />
-          </div>
-          <ProjectCardsContainer filter={filter} />
+      <div className="content-wrapper">
+        <div className={styles.hero}>
+          <div className={styles.title}>Vicky Bilbily</div>
+          <div className={styles.subtitle}>Multi-disciplinary software developer with strong UX sensibilities.</div>
+          <FilterNavigation filter={filter} />
         </div>
-        <Footer />
-      </>
+        <ProjectCardsContainer filter={filter} />
+      </div>
     )
 }

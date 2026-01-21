@@ -1,7 +1,6 @@
 import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { useState, createContext } from 'react';
-import { PaperBubbleTrail } from './components/PaperBubbleTrail.jsx';
-import { PaperBubbleFloat } from './components/PaperBubbleFloat.jsx';
+import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components/components.js';
 import { TYPE_CONFIGS, THEMES } from './data/constants.ts';
 import './app.css'
 
@@ -37,12 +36,12 @@ function App() {
 
   return (
     <ThemeContext value={{theme, setTheme}}>
-
       <div className="page-wrapper fade-in" onClick={handleClick}>
-        <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
+        <Header />
         <Outlet context={filter}/>
+        <Footer />
       </div>
-
+    <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
     </ThemeContext>
   )
 }

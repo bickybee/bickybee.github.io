@@ -26,6 +26,8 @@ a {
 .page-wrapper {
   min-height: 100%;
   max-width: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 150px;
 }
 
 .content-wrapper {
@@ -34,7 +36,6 @@ a {
   flex-grow: 1;
   place-items: center;
   display: grid;
-  grid-template-rows: auto 1fr;
   gap: 10px;
 }
 

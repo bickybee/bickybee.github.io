@@ -6,6 +6,7 @@
   font-family: 'Solway';
   font-weight: 400;
   color:#333;
+  margin-top: 50px;
 }
 
 .subtitle {
@@ -18,5 +19,5 @@
 }
 
 .hero {
-  margin-bottom:30px;
+  margin-bottom:50px;
 }

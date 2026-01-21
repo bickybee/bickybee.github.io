@@ -15,21 +15,15 @@ export function AboutPage() {
     }, []);
 
     return (
-        <>
-            <div className="page-wrapper">
-                <Header />
-                <div className={styles.grid + " content-wrapper"}>
-                    <div className={styles.gridItem}>
-                        <img src="/vicky-portrait.png" alt="Vicky Bilbily Portrait by Vicky Bilbily" width="500px"/>
-                    </div>
-                    <div className={styles.gridItem + " fade-in"}>
-                        <p className={styles.about}>
-                           <Markdown>{aboutText}</Markdown>
-                        </p>
-                    </div>
+        <div className={styles.grid + " content-wrapper"}>
+            <div className={styles.gridItem}>
+                <img src="/vicky-portrait.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!" width="550px"/>
+            </div>
+            <div className={styles.gridItem + " fade-in"}>
+                <div className={styles.about}>
+                    <Markdown>{aboutText}</Markdown>
                 </div>
             </div>
-            <Footer />
-        </>
+        </div>
     )
 }

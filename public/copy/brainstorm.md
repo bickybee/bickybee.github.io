@@ -1,4 +1,10 @@
 
+These experience range from video games
+
+My favorite way to work is to collaborate directly with users in a tight iteration-loop. I've done this while...
+- building educational games for kids, all-the-while working as a teacher for our target audience, 
+- developing game-engine tooling to support technical game designer workflows
+- integrating UI screens and animations in collaboration with UI artists
 
 
 This may come as a surprise, but my favorite kinds of problems to solve are communication problems. Good communication is my guiding star, across all disciplines:
