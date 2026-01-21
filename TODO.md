@@ -1,6 +1,6 @@
 NEXT UP:
-- [ ] about page
-- [ ] resume page
+- [x] about page
+- [x] resume page
 - [ ] socials in footer
 - [ ] project page content
 - [ ] logo fix

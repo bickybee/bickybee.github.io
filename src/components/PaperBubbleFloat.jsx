@@ -45,7 +45,7 @@ export function PaperBubbleFloat(props) {
           var randomX = xMin + Math.floor(Math.random() * (squareSize - padding * 2))
           var randomY = yMin + Math.floor(Math.random() * (squareSize - padding * 2))
           grid.current[i][j] = {
-            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 10, 20),
+            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 15, 35),
             tOffset: Math.random() * 1000
           };
         }

@@ -1,0 +1,24 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.gridItem {
+    font-size: 24pt;
+    background-color: var(--off-white-transparent);
+    border-radius: 50px;
+}
+
+.about {
+    margin-top: 80px;
+}
+
+h2 {
+    font-family: 'Solway';
+    font-weight: 500;
+    color: #333;
+}

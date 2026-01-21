@@ -29,14 +29,14 @@ header {
   gap: 20px;
 }
 
-.logo {
-  cursor: pointer;
-  transition: transform 0.2s;
-  pointer-events: auto;
+.clickable {
+    display: block;
+    transition: transform 0.2s;
 }
 
-.logo > img:hover {
-    transform: scale(2);
+.clickable.-wfp-hover
+.clickable:hover {
+    transform: scale(1.2);
     transition: transform 0.2s;
 }
 
