@@ -3,10 +3,16 @@ export const PROJECTS = [
     id: "superCodeSaga",
     title: "SuperCode Saga",
     subtitle: "Educational Game Development @ Creatubbles",
-    tagline: "A curriculum of narrative-driven games that teach kids computer science through hands-on Lua programming.",
-    tags: ["education", "programming", "game", "ux"],
+    tagline: "Teaching computer-science curriculum through narrative-driven game experiences.",
     previewImage: "/entity-emporium.png",
-    contentPath: "/copy/supercode.md"
+    contentPath: "/copy/supercode.md",
+    tags: ["education", "programming", "game", "ux"],
+    skills: [
+      { type: "education", subSkills: ["Curriculum development", "Instructional design"]},
+      { type: "game", subSkills: ["Custom engine", "Prototyping", "Level design", "Narrative design"]},
+      { type: "programming", subSkills: ["Lua"]},
+      { type: "ux", subSkills: ["Figma", "Field research", "Interaction design"]}
+    ]
   },
   {
     id: "superCodeClub",
@@ -15,7 +21,13 @@ export const PROJECTS = [
     tagline: "A curriculum of narrative-driven games that teach kids computer science through hands-on Lua programming.",
     tags: ["education", "programming", "game"],
     previewImage: "/charting-course-cover.png",
-    contentPath: "/copy/supercodeClub.md"
+    contentPath: "/copy/supercodeClub.md",
+    skills: [
+      { type: "education", subSkills: ["Curriculum development", "Instructional design"]},
+      { type: "game", subSkills: ["Custom engine", "Gameplay scripting", "Level design", "Narrative design"]},
+      { type: "programming", subSkills: ["Lua"]},
+      { type: "ux", subSkills: ["Figma", "Field research", "Interaction design"]}
+    ]
   },
   {
     id: "jurassic",
@@ -24,7 +36,11 @@ export const PROJECTS = [
     tagline: "A dinosaur-collecting action game set in the Jurassic World universe, made for mobile in Unity.",
     tags: ["programming", "game"],
     previewImage: "/jurassic-roster.png",
-    contentPath: "/copy/jurassic.md"
+    contentPath: "/copy/jurassic.md",
+    skills: [
+      { type: "game", subSkills: ["Unity engine"]},
+      { type: "programming", subSkills: ["C#", "Javascript", "Node-js", "Unit and integration testing"]},
+    ]
   },
   {
     id: "unannounced",
@@ -33,7 +49,11 @@ export const PROJECTS = [
     tagline: "An unannounced project built in Unreal Engine.",
     tags: ["programming", "game"],
     previewImage: "/unreal.jpg",
-    contentPath: "/copy/unreal.md"
+    contentPath: "/copy/unreal.md",
+    skills: [
+      { type: "game", subSkills: ["Unreal engine", "Netcode","Gameplay Ability System", "Behaviour Trees"]},
+      { type: "programming", subSkills: ["C++"]},
+    ]
   },
   {
     id: "uoft",
@@ -42,7 +62,11 @@ export const PROJECTS = [
     tagline: "Human-computer interaction research on novel interaction techniques for spatiotemporal planning.",
     tags: ["programming", "ux"],
     previewImage: "/space-time2.png",
-    contentPath: "/copy/space-time.md"
+    contentPath: "/copy/space-time.md",
+    skills: [
+      { type: "ux", subSkills: ["User research", "Prototyping", "Usability testing"]},
+      { type: "programming", subSkills: ["Swift", "iOS", "Javascript"]},
+    ]
   },
   {
     id: "art",
@@ -51,6 +75,9 @@ export const PROJECTS = [
     tagline: "Collected illustrations, animations, and artwork.",
     tags: ["art"],
     previewImage: "/temp-bg.png",
-    contentPath: "/copy/art.md"
+    contentPath: "/copy/art.md",
+    skills: [
+      { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"]},
+    ]
   }
 ];

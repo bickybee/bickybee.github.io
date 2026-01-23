@@ -1,15 +1,15 @@
-NEXT UP:
-- [x] about page
-- [x] resume page
-- [x] fix filter button colors
-- [x] socials in footer
-- [ ] project page content
-- [x] header footer --> move out to app level
-
-LATER
+CURRENT:
 - [ ] project page component for listing tools/tech (per category?)
+- [ ] project page writing + placeholder media
+- [ ] project page media
+
+NEXT:
+- [ ] resume bolding
+- [ ] resume remove location
 - [ ] mobile layout
-- [ ] improve logo
+
+POLISH
+- [ ] fix project grid 1-entry sizing (illustration)
 - [ ] bubbles improvements
     - [ ] create data type to track bubble's origin regardless of anim
     - [ ] make bubbles interact with cursor motion

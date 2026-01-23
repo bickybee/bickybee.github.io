@@ -4,7 +4,7 @@ import Markdown from 'react-markdown';
 
 import styles from './project.module.css'
 import { PROJECTS } from '../data/projects.js';
-import { Header, Footer, TagCollection } from '../components/components.js';
+import { SkillCardsContainer } from '../components/components.js';
 
 export function ProjectPage() {
     let { projectId } = useParams();
@@ -27,8 +27,8 @@ export function ProjectPage() {
         <div className="content-wrapper">
             <div className={styles.title}> {projectData.title} </div>
             <div className={styles.subtitle}> {projectData.tagline} </div>
-            <TagCollection tags={projectData.tags} size="big" align="center"/>
-            <div className={styles.content + ' fade-in'}>
+            <SkillCardsContainer skills={projectData.skills}/>
+            <div className={styles.content}>
                 <Markdown>{projectText}</Markdown>
             </div>
         </div>

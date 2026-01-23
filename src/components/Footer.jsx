@@ -6,7 +6,7 @@ export function Footer(){
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.left}>&copy; 2026 Vicky Bilbily. Built with React and Paper.js!</div>
+            <div className={styles.left}>&copy; 2026 Vicky Bilbily. Crafted with Figma, React, and Paper.js.</div>
             <div className={styles.right}>
                 <a href="https://www.linkedin.com/in/vickybilbily/" title="LinkedIn"><FontAwesomeIcon icon={faLinkedin} className="fa-2xl"/></a>
                 <a href="https://github.com/bickybee" title="GitHub"><FontAwesomeIcon icon={faGithub} className="fa-2xl" /></a>
