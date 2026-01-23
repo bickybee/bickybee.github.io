@@ -16,12 +16,14 @@ export function AboutPage() {
 
     return (
         <div className={styles.grid + " content-wrapper"}>
-            <div className={styles.gridItem}>
-                <img src="/vicky-portrait.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!" width="550px"/>
-            </div>
-            <div className={styles.gridItem + " fade-in"}>
-                <div className={styles.about}>
-                    <Markdown>{aboutText}</Markdown>
+            <div className={styles.row}>
+                <div className={styles.gridItem}>
+                    <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
+                </div>
+                <div className={styles.gridItem + " fade-in"}>
+                    <div className={styles.about}>
+                        <Markdown>{aboutText}</Markdown>
+                    </div>
                 </div>
             </div>
         </div>

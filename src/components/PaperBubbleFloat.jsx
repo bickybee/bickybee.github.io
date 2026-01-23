@@ -1,5 +1,5 @@
 import paper from 'paper';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { randomBubble, getColor } from '../utils/paperUtils.js';
 import styles from './paper.module.css'
 
@@ -11,7 +11,6 @@ export function PaperBubbleFloat(props) {
   useEffect(() => {
     // Get the canvas from the ref
     const canvas = canvasRef.current;
-
     // Make sure paper is not already set up on this canvas
     if (!canvas || canvas.getAttribute('data-paper-scope')) {
       console.log("Paper.js already running on this canvas");
@@ -20,8 +19,8 @@ export function PaperBubbleFloat(props) {
 
     paper.setup(canvas);
 
-    var squareSize = 350;
-    var padding = 20;
+    var squareSize = 375;
+    var padding = 10;
     var gridSizeX = Math.floor((paper.view.size.width + (squareSize/2)) / squareSize);
     var gridSizeY = Math.floor((paper.view.size.height + (squareSize/2)) / squareSize);
 
@@ -45,7 +44,7 @@ export function PaperBubbleFloat(props) {
           var randomX = xMin + Math.floor(Math.random() * (squareSize - padding * 2))
           var randomY = yMin + Math.floor(Math.random() * (squareSize - padding * 2))
           grid.current[i][j] = {
-            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 15, 35),
+            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 15, 20),
             tOffset: Math.random() * 1000
           };
         }

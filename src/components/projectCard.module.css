@@ -16,11 +16,13 @@
   margin-left:10px;
   margin-right:10px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   transition: transform 0.2s;
   cursor: pointer;
   pointer-events: auto;
   background-color: var(--off-white-transparent);
+  border: #fff 20px solid;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
 .projectBlock:hover{

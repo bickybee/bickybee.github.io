@@ -1,10 +1,10 @@
 NEXT UP:
 - [x] about page
 - [x] resume page
-- [ ] fix filter button colors
-- [ ] socials in footer
+- [x] fix filter button colors
+- [x] socials in footer
 - [ ] project page content
-- [ ] header footer --> move out to app level
+- [x] header footer --> move out to app level
 
 LATER
 - [ ] project page component for listing tools/tech (per category?)
