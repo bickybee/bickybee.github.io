@@ -33,11 +33,14 @@ export function ProjectPage() {
                 <div className={styles.imageContainer}>
                     <img src={projectData.previewImage}></img>
                 </div>
-                <div className={styles.skills + ' fade-in'}>
-                    { allSkills }
-                </div>
                 <div className={styles.content}>
-                    <Markdown>{projectText}</Markdown>
+                    <div className={styles.skills + ' fade-in'}>
+                        Skills involved: 
+                        { allSkills }
+                    </div>
+                    <div className={styles.markdownContent}>
+                         <Markdown>{projectText}</Markdown>
+                    </div>
                 </div>
         </div>
     )
