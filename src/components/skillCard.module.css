@@ -1,6 +1,7 @@
 @import '../colors.css';
 
 .card {
+    flex-grow: 1;
     width: 20%;
     background-color: lightgray;
     display: grid;
@@ -31,4 +32,5 @@
 
 ul, ol {
     padding-left: 20px;
+    line-height: 1.6;
 }

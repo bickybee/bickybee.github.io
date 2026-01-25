@@ -21,7 +21,7 @@ export function ProjectCard(props) {
             {props.title}
           </div>
            <div className= {styles.projectSubtitle}>
-            {props.subtitle}
+            {props.context}
           </div>
       </div>
 

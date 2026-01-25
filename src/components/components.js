@@ -9,4 +9,3 @@ export * from './ProjectCardsContainer.jsx';
 export * from './TagCollection.jsx';
 export * from './ThemeButton.jsx';
 export * from './SkillCard.jsx';
-export * from './SkillCardsContainer.jsx';
