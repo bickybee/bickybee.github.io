@@ -8,7 +8,7 @@ html {
 
 body {
   background: var(--off-white);
-  font-family: 'Varela Round';
+  font-family: 'Varela';
   height: 100dvh;
   margin: 0;
   padding: 0;
@@ -19,6 +19,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Solway';
   color: rgb(0, 0, 0);
+  font-weight: normal;
 }
 
 #root {

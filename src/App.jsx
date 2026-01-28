@@ -1,4 +1,4 @@
-import { Outlet, ScrollRestoration } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { useState, createContext } from 'react';
 import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components/components.js';
 import { TYPE_CONFIGS, THEMES } from './data/constants.ts';

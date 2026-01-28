@@ -3,6 +3,14 @@ import { useEffect, useState } from 'react';
 import Markdown from 'react-markdown';
 import styles from './about.module.css'
 
+function TextContent(props) {
+  if (props.aboutText) {
+    return <></>
+  } else{
+    return <PaperBubbleTrail filter={props.filter} renderTime={props.renderTime} />;
+  } 
+}
+
 export function AboutPage() {
     const [aboutText, setAboutText] = useState(null);
 
@@ -14,18 +22,22 @@ export function AboutPage() {
         console.log('Project component mounted or updated');
     }, []);
 
-    return (
-        <div className={styles.grid + " content-wrapper"}>
-            <div className={styles.row}>
-                <div className={styles.gridItem}>
-                    <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
-                </div>
-                <div className={styles.gridItem + " fade-in"}>
-                    <div className={styles.about}>
+    if (aboutText){
+        return (
+        <div className={styles.contentWrapper}>
+            <div className={styles.gridItem1}>
+                <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
+            </div>
+            <div className={styles.gridItem2 + " fade-in"}>
+                <div className={styles.aboutGrid}>
+                    <div className={styles.aboutContent}>
                         <Markdown>{aboutText}</Markdown>
                     </div>
                 </div>
             </div>
         </div>
-    )
+        )
+    } else {
+        return (<></>)
+    }
 }

@@ -1,6 +1,6 @@
 import { useOutletContext } from 'react-router-dom';
 import styles from './home.module.css'
-import { FilterNavigation, Footer, Header, ProjectCardsContainer } from '../components/components.js';
+import { FilterNavigation, ProjectCardsContainer } from '../components/components.js';
 
 
 export function HomePage(props) {
