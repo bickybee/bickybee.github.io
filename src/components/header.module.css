@@ -3,7 +3,7 @@ header {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    padding: 30px 60px 30px 60px;
+    padding: 2rem;
     box-sizing: border-box;
 
     display:flex;
@@ -15,48 +15,50 @@ header {
     background-color: transparent;
 }
 
-.left {
+header img {
+    width: clamp(120px, 20vw, 200px);
+}
+
+.links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap:10px;
-  font-size: 16pt;
+  font-size: 1.2rem;
+  gap: 1.2rem;
 }
 
-.right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.hamburger {
+    display: none; /* Hide hamburger on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
 }
 
-.clickable {
-    display: block;
-    transition: transform 0.2s;
-}
 
-.clickable.-wfp-hover
-.clickable:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s;
-}
 
-.ux {
-    background-color: var(--ux-color);
-}
+/* --- Mobile Styles (Media Query) --- */
+@media screen and (max-width: 768px) {
+    .links {
+        display: none; /* Hide links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+    }
 
-.art {
-    background-color: var(--art-color);
-}
+    .links.active {
+        display: flex; /* Show links when "active" class is applied via JS */
+    }
+    
+    .links li a {
+        padding: 15px;
+        text-align: center;
+    }
 
-.game {
-    background-color: var(--game-color);
-}
-
-.education {
-    background-color: var(--education-color);
-}
-
-.programming {
-    background-color: var(--programming-color);
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
 }

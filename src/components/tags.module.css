@@ -1,16 +1,16 @@
-@import '../colors.css';
+@import '../vars.css';
 
 .tagContainer {
-  padding-top: 20px;
   display: flex;
-  padding-top: 10px;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 0.3rem;
+    margin-top: 0.7rem;
+
  }
 
 .tag {
   float: left;
-
+  font-size: 1rem;
   display: block;
   border-radius: 15px;
   border-width: 3px;
@@ -19,15 +19,7 @@
   padding-bottom: 2px;
   padding-left: 8px;
   padding-right: 8px;
-  background-color: var(--off-white);
-}
-
-.small {
-    font-size: 12pt;
-}
-
-.big {
-    font-size: 20pt;
+  background-color: white;
 }
 
 .programming {

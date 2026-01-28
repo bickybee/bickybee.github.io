@@ -3,7 +3,7 @@ import styles from './tags.module.css'
 
 export function TagCollection(props) {
   const tags = props.tags.map(tag => (
-    <div className={styles.tag + ' ' + styles[tag] + ' ' + styles[props.size]} key={tag}>
+    <div className={styles.tag + ' ' + styles[tag]} key={tag}>
       { TYPE_CONFIGS[tag].text }
     </div>
   ));

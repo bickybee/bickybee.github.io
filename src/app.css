@@ -1,8 +1,9 @@
-@import './colors.css';
+@import './vars.css';
 
 html {
   height: 100%;
   overflow-y: scroll;
+  font-size: 16px;
 }
 
 body {
@@ -36,36 +37,15 @@ a {
   grid-template-rows: 100px 1fr 150px;
 }
 
-.content-wrapper {
-  margin-left: 15%;
-  margin-right: 15%;
-  flex-grow: 1;
-  place-items: center;
-  display: grid;
-  gap: 10px;
-}
-
-.left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.right {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .button {
   border-radius: 155px;
   font-family: "Solway";
-  font-size: 15pt;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   vertical-align: middle;
   color: white;
-  /* background-color: rgb(177, 177, 177); */
+
   border-width: 0;
-  padding: 12px;
+  padding: 0.5em 0.75em 0.5em 0.75em;
   cursor: pointer;
   transition: transform 0.2s;
   pointer-events: auto;

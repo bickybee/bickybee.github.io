@@ -8,7 +8,7 @@ export function HomePage(props) {
   const filter = useOutletContext();
 
     return (
-      <div className="content-wrapper">
+      <div className={styles.contentWrapper}>
         <div className={styles.hero}>
           <div className={styles.title}>Vicky Bilbily</div>
           <div className={styles.subtitle}>Multi-disciplinary software developer with strong UX sensibilities.</div>

@@ -1,4 +1,4 @@
-@import '../colors.css';
+@import '../vars.css';
 
 .card {
     flex-grow: 1;

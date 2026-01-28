@@ -17,12 +17,14 @@ export function ProjectCard(props) {
         <div className = {styles.projectImg}>
           <img src={props.previewImage} alt={props.title} width="100%" />
         </div>
+        <div className={styles.textOverlay}>
           <div className= {styles.projectTitle}>
             {props.title}
           </div>
-           <div className= {styles.projectSubtitle}>
+            <div className= {styles.projectSubtitle}>
             {props.context}
           </div>
+        </div>
       </div>
 
       <div className={styles.projectInfo}>

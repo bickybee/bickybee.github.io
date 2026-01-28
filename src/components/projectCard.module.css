@@ -1,29 +1,56 @@
-@import '../colors.css';
+@import '../vars.css';
 
 .projectsContainer {
-  margin-top: 50px;
-  display: grid;
-  gap: 30px;
-  grid-template-columns: 50% 50%;
-  pointer-events: none;
-  border-radius: 10px;
+  display: flex;
+  gap: 1.5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
 }
 
 .projectBlock {
-  display: block;
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
   position: relative;
-  margin-left:10px;
-  margin-right:10px;
-  margin-bottom: 20px;
   border-radius: 20px;
   transition: transform 0.2s;
   cursor: pointer;
   pointer-events: auto;
-  background-color: var(--off-white-transparent);
+  background-color: white;
   border: #fff 20px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  margin-top: 3%;
 }
+
+@media (max-width: 900px) {
+  .projectsContainer {
+    flex-direction: column;
+    align-items: center;
+
+    display: flex;
+    gap: 10%;
+
+    justify-content: center;
+    width: 100%;
+  }
+
+  .projectBlock {
+    max-width: 95%;
+    position: relative;
+    border-radius: 20px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    pointer-events: auto;
+    background-color: white;
+    border: #fff 20px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  }
+}
+
+
 
 .projectBlock:hover{
   cursor: pointer;
@@ -33,31 +60,26 @@
 
 .projectTitle {
   display: block;
-  position: absolute;
-  bottom: 50px;
-  color: var(--off-white);
-  font-size: 32pt;
-  padding-left: 15px;
-  font-family: 'Solway';
+  font-size: clamp(2rem, 5vw, 2.5rem);
   font-weight: 400;
-  white-space: pre-line;
-  z-index: 2;
-  /*background-color: rgba(0, 0, 0, 0.6);*/
-  border-radius: 0px 10px 10px 0px;
 }
 
 .projectSubtitle {
   display: block;
-  position: absolute;
-  bottom: 25px;
-  color: var(--off-white);
   opacity: 0.8;
-  font-size: 15pt;
-  padding-top: 10px;
-  padding-left: 17px;
-  font-family: 'Solway';
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   font-weight: 300;
-  white-space: pre-line;
+}
+
+.textOverlay {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  padding: 1rem;
+  color: white;
+  font-family: 'Solway';
   z-index: 2;
 }
 
@@ -67,6 +89,8 @@
   height: auto;
   overflow: hidden;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse
 }
 
 .projectImg::after {
@@ -92,11 +116,8 @@
   position: relative;
   top: 0px;
   display: block;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 20px;
-  margin-bottom:30px;
-  font-size: 14pt;
+  padding: 1rem 0.2rem 1rem 0.2rem;
+  font-size: 1rem;
   color:#333;
   font-family: 'Varela Round';
   border-radius: 10px;

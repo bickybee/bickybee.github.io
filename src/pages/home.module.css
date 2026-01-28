@@ -1,17 +1,32 @@
-@import '../colors.css';
+@import '../vars.css';
+
+.contentWrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  flex-grow: 1;
+  place-items: center;
+  display: grid;
+  padding: 0px 50px 50px 50px;
+}
+
+@media (max-width: 900px) {
+  .contentWrapper {
+    padding: 0px 20px 20px 20px;
+    gap: 1rem;
+  }
+}
 
 .title {
-  font-size: 85pt;
+  font-size: clamp(5rem, 12vw, 7rem);
   text-align: center;
   font-family: 'Solway';
   font-weight: 400;
   color:#333;
-  margin-top: 25px;
   text-shadow: 0px 2px 3px #78787889;
 }
 
 .subtitle {
-  font-size: 24pt;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
   font-family: 'Solway';
   font-weight: 400;
@@ -21,5 +36,16 @@
 }
 
 .hero {
-  margin-bottom:25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    gap: 1rem;
+  }
+  
 }

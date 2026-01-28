@@ -1,11 +1,12 @@
-@import '../colors.css';
+@import '../vars.css';
 
 .buttonContainer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  pointer-events: none;
-  margin-top: 40px;
+  gap: 1rem;
+  margin-top: 1.6rem;
 }
 
 .programming {
