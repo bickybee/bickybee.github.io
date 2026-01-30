@@ -1,4 +1,8 @@
+## The Project
+
 SuperCode is a sandbox game where kids can learn to code while creating their own games, built by Creatubbles. Its mission is for kids to have fun while learning about computer science! As part of this mission, SuperCode also creates collections of story-based educational games. Kids learn and practice Lua programming while taking part in the adventures of the characters of the SuperCode universe.
+
+## My Contributions
 
 I wear many hats on this project. In traditional games-industry terms, my role is most akin to that of a Technical Designer: lots of design, lots of implementation (in the custom SuperCode engine), lots of scripting (in Lua)! I'm also responsible for Instructional Design across the entire project -- the success of the educational aspects of the games is my top concern.
 

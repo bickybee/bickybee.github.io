@@ -2,6 +2,8 @@
 
 .contentWrapper {
     max-width: 1200px;
+    padding: 30px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -59,7 +61,7 @@
 .aboutContent {
     width: 70%;
     margin-left: 15%;
-    font-size: clamp(0.8rem, 3vh, 1.5rem);
+    font-size: clamp(1rem, min(2.5vh, 2vw), 4rem);
     line-height: 1.6;
 }
 

@@ -1,4 +1,6 @@
 
+## The Project
+
 When it comes to planning the minutiae of a busy day, or week, I find myself opening up Google Maps more often than any calendar tool. I use it to help figure out which destinations to hit and in what order: options for places to grab lunch with a friend, grocery stores on the way home, the best time to squeeze in the gym...
 
 Is Google Maps a scheduling tool? Kind of. There's a lot of time-related data in there, but it's primarily provided via plain text.
@@ -14,11 +16,5 @@ I did this work as a graduate student in the University of Toronto's Dynamic Gra
 
 You can read the full paper here!
 
-## The Workflow
+## The Work
 Time to get academic. We broke 
-
-## The Prototype
-
-
-## The Study
-

@@ -28,7 +28,7 @@
 @media (max-width: 900px) {
   .projectsContainer {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
     display: flex;
     gap: 10%;

@@ -41,7 +41,13 @@ export function PaperBubbleTrail(props) {
 
     // Add a bubble when mouse moves
     paper.view.onMouseMove = (event) => {
-      var bubble = randomBubble(event.point, props.filter, 5, 10, true);
+      var sizeMultiplier = 1
+      if (event.delta.length > 10) {
+        sizeMultiplier = Math.max(1, (event.delta.length - 10) * 0.2);
+      }
+      //var sizeMultiplier = Math.max(1, event.delta.length * 0.2);
+      var bubble = randomBubble(event.point, props.filter, 5, 10, true, sizeMultiplier);
+      
       bubbles.current.set(bubble.id, bubble);
 
       setTimeout(() => {

@@ -39,17 +39,27 @@ header img {
 
 /* --- Mobile Styles (Media Query) --- */
 @media screen and (max-width: 768px) {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        background-color: var(--off-white);
+    }
+
     .links {
         display: none; /* Hide links by default on mobile */
         flex-direction: column;
-        width: 100%;
-        background-color: #444;
-        position: absolute;
-        top: 60px; /* Adjust based on navbar height */
-        left: 0;
+        background-color: lightblue;
+        position: fixed;
+        top: 100px; /* Adjust based on navbar height */
+        right: 0px;
+        width: 100vw;
+        bottom: 0px;
+        z-index: 50;
+        justify-content: space-around;
     }
 
-    .links.active {
+    .active {
         display: flex; /* Show links when "active" class is applied via JS */
     }
     
