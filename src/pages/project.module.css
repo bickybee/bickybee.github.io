@@ -22,15 +22,35 @@
 }
 
 .skills {
+  top: 40%;
+  left: 0;
+  position: absolute;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;
   height: auto;
-  padding: 20px;
-  width: 100%;
+  width: 15%;
+  padding: 20px 20px 20px 0px;
+  border-radius: 0px 15px 15px 0px;
+  background-color: var(--off-white-transparent);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+
+    -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+         -o-animation: fadein 1s; /* Opera < 12.1 */
+            animation: fadein 1s;
+  animation-timeline: view();
+  animation-range: entry;
+  animation-timing-function: ease-out;
 }
 
 .content {
+  width: 80%;
+}
+
+.markdownContent {
   background-color: var(--off-white-transparent);
   border-radius: 15px;
   font-size: 16pt;
@@ -41,7 +61,7 @@
 }
 
 .imageContainer {
-  width: 100%; /* Or a fixed width, e.g., 300px */
+  width: 80%; /* Or a fixed width, e.g., 300px */
   height: 400px; /* Set a specific height for the div */
   overflow: hidden; /* Hides any overflowing parts of the image */
   border-radius: 15px;
@@ -60,4 +80,31 @@ a, a:visited, a:active {
 
 p {
   margin-bottom: 35px; /* Adds space between paragraphs */
+}
+
+@keyframes fadein {
+    0% { opacity: 0; transform: translateX(-100%); }
+    30% { opacity: 0; transform: translateX(-100%); }
+    100%   { opacity: 1; transform: translateX(0); }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    0% { opacity: 0; transform: translateX(-100%); }
+    30% { opacity: 0; transform: translateX(-100%); }
+    100%   { opacity: 1; transform: translateX(0); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    0% { opacity: 0; transform: translateX(-100%); }
+    30% { opacity: 0; transform: translateX(-100%); }
+    100%   { opacity: 1; transform: translateX(0); }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    0% { opacity: 0; transform: translateX(-100%); }
+    30% { opacity: 0; transform: translateX(-100%); }
+    100%   { opacity: 1; transform: translateX(0); }
 }
