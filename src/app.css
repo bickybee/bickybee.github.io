@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #333;
 }
 
 .page-wrapper {
@@ -99,7 +99,7 @@ a {
 @media screen and (max-width: 768px) {
     .page-wrapper {
         grid-template-rows: 1fr 150px;
-        padding-top: 100px;
+        padding-top: 90px;
         padding-bottom: 0px;
     }
 }

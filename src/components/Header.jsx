@@ -2,6 +2,9 @@ import styles from './header.module.css';
 import { ThemeButton } from './components.js';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 export function Header(props){
 
@@ -22,14 +25,23 @@ export function Header(props){
                 <Link to="/"><img src="/logo2.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
             </div>
             <div className={styles.right}>
-                <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')} onClick={onLinkClick}>
-                    <Link to="/" className={styles.clickable}>Home</Link>
-                    <Link to="/about">About</Link>
-                    <a href="Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    <ThemeButton />
+                <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')}>
+                    <Link to="/" className={styles.linkPink} onClick={onLinkClick}>
+                        Home
+                    </Link>
+                    <div className={styles.linkBlue} onClick={onLinkClick}>
+                        <Link to="/about">About</Link>
+                    </div>
+                    <div className={styles.linkOrange} onClick={onLinkClick}>
+                        <a href="Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                    </div>
+                    <div className={styles.linkGreen}>
+                        <ThemeButton />
+                    </div>
                 </div>
                 <div className={styles.hamburger} onClick={onHamburgerClick}>
-                    CLICK
+                    <div></div>
+                    <FontAwesomeIcon icon={faBars} />
                 </div>
             </div>
         </header>
