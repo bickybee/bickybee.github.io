@@ -6,17 +6,19 @@
   flex-grow: 1;
   place-items: center;
   display: grid;
-  gap: 20px;
-  padding: 0px 50px 50px 50px;
+  gap: 2em;
+  padding: 50px 100px 50px 100px;
 }
 
 .title {
-  font-size: clamp(4rem, 7vw, 6rem);
+  font-size: clamp(4rem, 5vw, 6rem);
   text-align: center;
   font-family: 'Solway';
   font-weight: 400;
   color:#333;
+  line-height: 90%;
   text-shadow: 0px 2px 3px #78787889;
+  white-space: pre-wrap;
 }
 
 .subtitle {
@@ -26,7 +28,6 @@
   font-weight: 400;
   color:#383838;
   text-shadow: 0px 1px 1px #78787889;
-  width: 80%;
 }
 
 .overviewGrid {
@@ -35,7 +36,7 @@
   justify-content: center;
   gap: 30px;
   width: 100%;
-  margin-top: 5%;
+  margin-top: 2rem;
 }
 
 .imageContainer {
@@ -91,7 +92,8 @@
 
 .markdownContent {
   width: 70%;
-  font-size: 1rem;
+  margin: auto;
+  font-size: 1.2rem;
   color:#303030;
   padding: 40px 80px 80px 80px;
   line-height: 1.6;
