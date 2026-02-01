@@ -8,10 +8,15 @@ export const PROJECTS = [
     contentPath: "/copy/supercode.md",
     tags: ["education", "programming", "game", "ux"],
     skills: [
-      { type: "education", subSkills: ["Curriculum development", "Instructional design"]},
-      { type: "game", subSkills: ["Custom engine", "Prototyping", "Level design", "Narrative design"]},
       { type: "programming", subSkills: ["Lua"]},
-      { type: "ux", subSkills: ["Figma", "Field research", "Interaction design"]}
+      { type: "ux", subSkills: ["Figma", "Experience Design"]},
+      { type: "game", subSkills: ["Game Design", "Prototyping"]},
+      { type: "education", subSkills: ["Curriculum Development", "Instructional Design"]}
+    ],
+    details: [
+      { heading: "Where?", content: "Creatubbles"},
+      { heading: "When?", content: "2023 - present"},
+      { heading: "What?", content: "Educational Game Developer (wearing many hats!)"}
     ]
   },
   {
@@ -23,8 +28,13 @@ export const PROJECTS = [
     previewImage: "/jurassic-roster.png",
     contentPath: "/copy/jurassic.md",
     skills: [
-      { type: "game", subSkills: ["Unity", "Mobile game development"]},
-      { type: "programming", subSkills: ["C#", "Javascript", "Node.js", "Mocha.js (unit and integration testing)"]},
+      { type: "game", subSkills: ["Unity", "Mobile"]},
+      { type: "programming", subSkills: ["C#", "Javascript", "Node.js", "Mocha.js (test suite)"]},
+    ],
+    details: [
+      { heading: "Where?", content: "Behaviour Interactive"},
+      { heading: "When?", content: "2020 - 2022"},
+      { heading: "What?", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -36,8 +46,13 @@ export const PROJECTS = [
     previewImage: "/unreal.jpg",
     contentPath: "/copy/unreal.md",
     skills: [
-      { type: "game", subSkills: ["Unreal engine", "Netcode","Gameplay Ability System", "Behaviour Trees"]},
+      { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"]},
       { type: "programming", subSkills: ["C++"]},
+    ],
+    details: [
+      { heading: "Where?", content: "Behaviour Interactive"},
+      { heading: "When?", content: "2022 - 2023"},
+      { heading: "What?", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -49,8 +64,13 @@ export const PROJECTS = [
     previewImage: "/space-time2.png",
     contentPath: "/copy/space-time.md",
     skills: [
-      { type: "ux", subSkills: ["Interaction design", "Prototyping", "Usability testing"]},
+      { type: "ux", subSkills: ["UX Research", "Prototyping", "Usability Testing"]},
       { type: "programming", subSkills: ["Swift", "iOS"]},
+    ],
+    details: [
+      { heading: "Where?", content: "University of Toronto"},
+      { heading: "When?", content: "2018 - 2020"},
+      { heading: "What?", content: "Graduate Student Researcher"}
     ]
   },
   {
@@ -62,8 +82,13 @@ export const PROJECTS = [
     previewImage: "/unreal.jpg",
     contentPath: "/copy/unreal.md",
     skills: [
-      { type: "ux", subSkills: ["Figma", "Web design"]},
+      { type: "ux", subSkills: ["Figma", "Web Design"]},
       { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
+    ],
+    details: [
+      { heading: "Where?", content: "On the Internet"},
+      { heading: "When?", content: "2026"},
+      { heading: "What?", content: "Everything"}
     ]
   },
   {
@@ -77,6 +102,11 @@ export const PROJECTS = [
     skills: [
       { type: "ux", subSkills: ["Figma", "web design"]},
       { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
+    ],
+    details: [
+      { heading: "Where?", content: "On the Internet"},
+      { heading: "When?", content: "Ongoing"},
+      { heading: "What?", content: "Everything"}
     ]
   },
   {
@@ -89,6 +119,11 @@ export const PROJECTS = [
     contentPath: "/copy/art.md",
     skills: [
       { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"]},
+    ],
+    details: [
+      { heading: "Where?", content: "On the Internet"},
+      { heading: "When?", content: "Ongoing"},
+      { heading: "What?", content: "Everything"}
     ]
   }
 ];

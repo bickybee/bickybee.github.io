@@ -1,4 +1,3 @@
-
 export * from './FilterNavigation.jsx';
 export * from './Footer.jsx';
 export * from './Header.jsx';
@@ -9,3 +8,4 @@ export * from './ProjectCardsContainer.jsx';
 export * from './TagCollection.jsx';
 export * from './ThemeButton.jsx';
 export * from './SkillCard.jsx';
+export * from './SkillCollection.jsx';

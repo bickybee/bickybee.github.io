@@ -4,7 +4,7 @@ import Markdown from 'react-markdown';
 
 import styles from './project.module.css'
 import { PROJECTS } from '../data/projects.js';
-import { SkillCard } from '../components/components.js';
+import { SkillCollection } from '../components/components.js';
 
 export function ProjectPage() {
     let { projectId } = useParams();
@@ -14,9 +14,6 @@ export function ProjectPage() {
     }
 
     const [projectText, setProjectText] = useState(null);
-    const allSkills = projectData.skills.map(skill =>
-        <SkillCard skill={skill} key={skill.type} />
-    );
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -26,22 +23,44 @@ export function ProjectPage() {
         console.log('Project component mounted or updated');
     }, []);
 
+    const details = projectData.details.map(detail => (
+        <li>
+            <b>{ detail.heading} </b> { detail.content }
+        </li>
+        ) 
+    );
+
     return (
-        <div className={styles.pageWidth + " content-wrapper"}>
+        <div>
+            <div className={styles.contentWrapper}>
                 <div className={styles.title}> {projectData.title} </div>
                 <div className={styles.subtitle}> {projectData.tagline} </div>
-                <div className={styles.imageContainer}>
-                    <img src={projectData.previewImage}></img>
-                </div>
-                <div className={styles.content}>
-                    <div className={styles.skills + ' fade-in'}>
-                        Skills involved: 
-                        { allSkills }
+                <div className={styles.overviewGrid + ' fade-in'}>
+                    <div className={styles.gridLeft}>
+                        <div className={styles.imageContainer}>
+                            <img src={projectData.previewImage}></img>
+                        </div>
                     </div>
-                    <div className={styles.markdownContent}>
-                         <Markdown>{projectText}</Markdown>
+                    <div className={styles.gridRight}>
+                        <div className={styles.details}>
+                            <h2>Key Points</h2>
+                            <ul>
+                                { details }
+                            </ul>
+                        </div>
+                        <div className={styles.skills}>
+                            <h2>Skills & Tools Used</h2>
+                            <SkillCollection skills={projectData.skills}/> 
+                        </div>
                     </div>
                 </div>
+            </div>
+            
+            <div className={styles.content}>
+                <div className={styles.markdownContent}>
+                        <Markdown>{projectText}</Markdown>
+                </div>
+            </div>
         </div>
     )
 }

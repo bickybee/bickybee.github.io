@@ -2,12 +2,13 @@ CURRENT:
 - [ ] responsive project page
 - [ ] project page writing + placeholder media
 - [ ] project page media
+- [ ] window size change -> fix paper bubbles
 
 NEXT:
 - [ ] resume bolding
 - [ ] resume remove location
 - [ ] fix responsive about page
-- [ ] 
+
 
 POLISH
 - [ ] bubbles improvements

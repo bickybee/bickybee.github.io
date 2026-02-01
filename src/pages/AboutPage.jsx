@@ -1,43 +1,21 @@
-import { Header, Footer } from '../components/components.js';
-import { useEffect, useState } from 'react';
-import Markdown from 'react-markdown';
 import styles from './about.module.css'
 
-function TextContent(props) {
-  if (props.aboutText) {
-    return <></>
-  } else{
-    return <PaperBubbleTrail filter={props.filter} renderTime={props.renderTime} />;
-  } 
-}
-
 export function AboutPage() {
-    const [aboutText, setAboutText] = useState(null);
+    return (
+    <div className={styles.contentWrapper}>
+        <div className={styles.gridItem1}>
+            <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
+        </div>
+        <div className={styles.gridItem2 + " fade-in"}>
+            <div className={styles.aboutGrid}>
+                <div className={styles.aboutContent}>
+                    <h1>Hi! I'm Vicky.</h1>
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        fetch("copy/about.md").then(res => res.text()).then( text => {
-            setAboutText(text);
-        });
-        console.log('Project component mounted or updated');
-    }, []);
-
-    if (aboutText){
-        return (
-        <div className={styles.contentWrapper}>
-            <div className={styles.gridItem1}>
-                <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
-            </div>
-            <div className={styles.gridItem2 + " fade-in"}>
-                <div className={styles.aboutGrid}>
-                    <div className={styles.aboutContent}>
-                        <Markdown>{aboutText}</Markdown>
-                    </div>
+                    I love to make things. I draw from expertise in software engineering, human-computer interaction,
+                    and visual art to create experiences that are reliable, intentional, and delightful.  
                 </div>
             </div>
         </div>
-        )
-    } else {
-        return (<></>)
-    }
+    </div>
+    )
 }
