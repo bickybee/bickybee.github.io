@@ -10,23 +10,23 @@
 }
 
 .programming {
-    background-color: var(--programming-color);
+    background-color: var(--pink);
 }
 
 .ux {
-    background-color: var(--ux-color);
+    background-color: var(--orange);
 }
 
 .art {
-    background-color: var(--art-color);
+    background-color: var(--purple);
 }
 
 .game {
-    background-color: var(--game-color);
+    background-color: var(--blue);
 }
 
 .education {
-    background-color: var(--education-color);
+    background-color: var(--green);
 }
 
 .unselected {

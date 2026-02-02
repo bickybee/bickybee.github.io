@@ -1,0 +1,43 @@
+@import '../vars.css';
+
+.skillContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+    margin-left: 0;
+    padding-left: 0;
+ }
+
+.skill {
+  float: left;
+  font-size: 1rem;
+  display: block;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: white;
+}
+
+.programming {
+    background-color: var(--pink);
+}
+
+.ux {
+    background-color: var(--orange);
+}
+
+.game {
+    background-color: var(--blue);
+}
+
+.education {
+    background-color: var(--green);
+}
+
+.art {
+    background-color: var(--purple);
+}

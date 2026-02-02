@@ -12,8 +12,8 @@
   float: left;
   font-size: 1rem;
   display: block;
-  border-radius: 15px;
-  border-width: 3px;
+  border-radius: 10px;
+  border-width: 2px;
   border-style: solid;
   padding-top: 2px;
   padding-bottom: 2px;
@@ -23,26 +23,26 @@
 }
 
 .programming {
-    border-color: var(--programming-color);
-    color: var(--programming-color)
+    border-color: var(--pink);
+    color: var(--pink)
 }
 
 .ux {
-    border-color: var(--ux-color);
-    color: var(--ux-color)
+    border-color: var(--orange);
+    color: var(--orange)
 }
 
 .game {
-    border-color: var(--game-color);
-    color: var(--game-color);
+    border-color: var(--blue);
+    color: var(--blue);
 }
 
 .education {
-    border-color: var(--education-color);
-    color: var(--education-color);
+    border-color: var(--green);
+    color: var(--green);
 }
 
 .art {
-    border-color: var(--art-color);
-    color: var(--art-color);
+    border-color: var(--purple);
+    color: var(--purple);
 }

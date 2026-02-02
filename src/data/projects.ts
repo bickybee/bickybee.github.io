@@ -14,9 +14,9 @@ export const PROJECTS = [
       { type: "education", subSkills: ["Curriculum Development", "Instructional Design"]}
     ],
     details: [
-      { heading: "Where?", content: "Creatubbles"},
-      { heading: "When?", content: "2023 - present"},
-      { heading: "Role:", content: "Educational Game Developer (amongst other things!)"}
+      { iconKey: "where", content: "Creatubbles"},
+      { iconKey: "when", content: "2023 - present"},
+      { iconKey: "role", content: "Educational Game Developer"}
     ]
   },
   {
@@ -32,9 +32,9 @@ export const PROJECTS = [
       { type: "programming", subSkills: ["C#", "Javascript", "Node.js", "Mocha.js (test suite)"]},
     ],
     details: [
-      { heading: "Where?", content: "Behaviour Interactive"},
-      { heading: "When?", content: "2020 - 2022"},
-      { heading: "Role:", content: "Gameplay Programmer"}
+      { iconKey: "where", content: "Behaviour Interactive"},
+      { iconKey: "when", content: "2020 - 2022"},
+      { iconKey: "role", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -50,9 +50,9 @@ export const PROJECTS = [
       { type: "programming", subSkills: ["C++"]},
     ],
     details: [
-      { heading: "Where?", content: "Behaviour Interactive"},
-      { heading: "When?", content: "2022 - 2023"},
-      { heading: "Role:", content: "Gameplay Programmer"}
+      { iconKey: "where", content: "Behaviour Interactive"},
+      { iconKey: "when", content: "2022 - 2023"},
+      { iconKey: "role", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -68,9 +68,9 @@ export const PROJECTS = [
       { type: "programming", subSkills: ["Swift", "iOS"]},
     ],
     details: [
-      { heading: "Where?", content: "University of Toronto"},
-      { heading: "When?", content: "2018 - 2020"},
-      { heading: "Role:", content: "Graduate Student Researcher"}
+      { iconKey: "where", content: "University of Toronto"},
+      { iconKey: "when", content: "2018 - 2020"},
+      { iconKey: "role", content: "Graduate Student Researcher"}
     ]
   },
   {
@@ -86,9 +86,9 @@ export const PROJECTS = [
       { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
     ],
     details: [
-      { heading: "Where?", content: "On the Internet"},
-      { heading: "When?", content: "2026"},
-      { heading: "Role:", content: "Creator!"}
+      { iconKey: "where", content: "On the Internet"},
+      { iconKey: "when", content: "2026"},
+      { iconKey: "role", content: "Creator!"}
     ]
   },
   {
@@ -99,13 +99,14 @@ export const PROJECTS = [
     tags: ["art"],
     previewImage: "/media/tastys-blue.png",
     contentPath: "/copy/art.md",
+    wideImages: true,
     skills: [
       { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"]},
     ],
     details: [
-      { heading: "Where?", content: "Online, on walls, on paper."},
-      { heading: "When?", content: "Ongoing"},
-      { heading: "Role:", content: "Artist"}
+      { iconKey: "where", content: "Online, on walls, on paper."},
+      { iconKey: "when", content: "Ongoing"},
+      { iconKey: "role", content: "Artist"}
     ]
   }
 ];

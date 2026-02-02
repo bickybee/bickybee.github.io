@@ -72,7 +72,7 @@ header img {
         padding: 3vw;
         margin: auto;
         background-color: white;
-        color: var(--education-color);
+        color: var(--green);
     }
 
     .active {
@@ -85,7 +85,7 @@ header img {
 
     .linkGreen {
         flex: 1;
-        background-color: var(--education-color);
+        background-color: var(--green);
         width: 100%;
         bottom: 0px;
         text-align: center;
@@ -96,7 +96,7 @@ header img {
 
     .linkOrange {
         flex: 1;
-        background-color: var(--ux-color);
+        background-color: var(--orange);
         width: 100%;
         margin: auto;
         text-align: center;
@@ -106,7 +106,7 @@ header img {
 
     .linkPink {
         flex: 1;
-        background-color: var(--programming-color);
+        background-color: var(--pink);
         width: 100%;
         margin: auto;
         text-align: center;
@@ -116,7 +116,7 @@ header img {
 
     .linkBlue {
         flex: 1;
-        background-color: var(--game-color);
+        background-color: var(--blue);
         width: 100%;
         margin: auto;
         text-align: center;

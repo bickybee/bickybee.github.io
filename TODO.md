@@ -1,14 +1,15 @@
 CURRENT:
-- [ ] responsive project page
-- [ ] project page writing + placeholder media
-- [ ] project page media
-- [ ] window size change -> fix paper bubbles
-
-NEXT:
-- [ ] resume bolding
-- [ ] resume remove location
+- [ ] play with skill tag formatting
+- [ ] wideImg option for Markdown component
 - [ ] fix responsive about page
 
+THEN:
+- [ ] project page content
+
+NEXT:
+- [ ] window size change -> fix paper bubbles
+- [ ] resume bolding
+- [ ] resume remove location
 
 POLISH
 - [ ] bubbles improvements
@@ -16,3 +17,4 @@ POLISH
     - [ ] make bubbles interact with cursor motion
     - [ ] detect overlaps with certain divs, improve visibility...
 - [ ] fix vector portrait
+- [ ] REORGANIZE PROJECT and especially CSS

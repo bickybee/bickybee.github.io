@@ -1,10 +1,18 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Markdown from 'react-markdown';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot, faCalendarDays, faIdBadge } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './project.module.css'
 import { PROJECTS } from '../data/projects.js';
 import { SkillCollection } from '../components/components.js';
+
+const detailsIconMap = {
+    where: faLocationDot,
+    when: faCalendarDays,
+    role: faIdBadge
+}
 
 export function ProjectPage() {
     let { projectId } = useParams();
@@ -24,9 +32,9 @@ export function ProjectPage() {
     }, []);
 
     const details = projectData.details.map(detail => (
-        <li>
-            <b>{ detail.heading} </b> { detail.content }
-        </li>
+        <div>
+            <FontAwesomeIcon icon={detailsIconMap[detail.iconKey]} size="lg"/> { detail.content }
+        </div>
         ) 
     );
 
@@ -43,13 +51,11 @@ export function ProjectPage() {
                     </div>
                     <div className={styles.gridRight}>
                         <div className={styles.details}>
-                            <h2>Key Points</h2>
-                            <ul>
-                                { details }
-                            </ul>
+                            <h2>Key Facts</h2>
+                            { details }
                         </div>
                         <div className={styles.skills}>
-                            <h2>Skills & Tools Used</h2>
+                            <h2>Skills & Tools</h2>
                             <SkillCollection skills={projectData.skills}/> 
                         </div>
                     </div>
@@ -57,7 +63,7 @@ export function ProjectPage() {
             </div>
             
             <div className={styles.content}>
-                <div className={styles.markdownContent}>
+                <div className={styles.markdownContent + ' ' + (projectData.wideImages ?  styles.wideImg : styles.narrowImg)}>
                         <Markdown>{projectText}</Markdown>
                 </div>
             </div>

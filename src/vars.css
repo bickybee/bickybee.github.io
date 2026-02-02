@@ -1,9 +1,9 @@
 :root {
-  --programming-color: #f56c97;
-  --ux-color: #ec9238;
-  --game-color: #3898ec;
-  --education-color: #82b333;
-  --art-color: #a952fa;
+  --pink: #f56c97;
+  --orange: #ec9238;
+  --blue: #3898ec;
+  --green: #82b333;
+  --purple: #a952fa;
   --off-white: #f4f4f4;
   --off-white-transparent: #fff;
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
