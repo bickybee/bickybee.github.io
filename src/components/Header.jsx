@@ -22,7 +22,7 @@ export function Header(props){
     return (
         <header className={styles.header}>
             <div className={styles.clickable}>
-                <Link to="/"><img src="/logo2.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
+                <Link to="/"><img src="/media/logo2.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
             </div>
             <div className={styles.right}>
                 <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')}>
@@ -33,7 +33,7 @@ export function Header(props){
                         <Link to="/about">About</Link>
                     </div>
                     <div className={styles.linkOrange} onClick={onLinkClick}>
-                        <a href="Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+                        <a href="/media/Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
                     </div>
                     <div className={styles.linkGreen}>
                         <ThemeButton />

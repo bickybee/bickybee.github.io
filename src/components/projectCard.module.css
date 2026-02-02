@@ -13,7 +13,7 @@
 .projectBlock {
   display: flex;
   flex-direction: column;
-  max-width: 40%;
+  width: 40%;
   position: relative;
   border-radius: 20px;
   transition: transform 0.2s;
@@ -38,7 +38,7 @@
   }
 
   .projectBlock {
-    max-width: 95%;
+    width: 95%;
     position: relative;
     border-radius: 20px;
     transition: transform 0.2s;
@@ -49,8 +49,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
   }
 }
-
-
 
 .projectBlock:hover{
   cursor: pointer;
@@ -101,7 +99,7 @@
   right: 0;
   bottom: 5px;
   border-radius: 10px;
-  background: linear-gradient(to top, rgba(0, 0, 1, 0.8) 0%, rgba(0, 0, 0, 0.7) 20%, rgba(0, 0, 0, 0) 50%, transparent);
+  background: linear-gradient(to top, rgba(0, 0, 1, 0.8) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0) 50%, transparent);
   z-index: 1; /*Place the gradient overlay above the image */
 }
 

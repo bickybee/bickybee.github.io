@@ -19,8 +19,8 @@ export function PaperBubbleFloat(props) {
 
     paper.setup(canvas);
 
-    var squareSize = 375;
-    var padding = 10;
+    var squareSize = 400;
+    var padding = 60;
     var gridSizeX = Math.floor((paper.view.size.width + (squareSize/2)) / squareSize);
     var gridSizeY = Math.floor((paper.view.size.height + (squareSize/2)) / squareSize);
 
@@ -34,19 +34,22 @@ export function PaperBubbleFloat(props) {
       for (let i = 0; i < gridSizeX + 1; i++) {
         grid.current[i] = [];
         for (let j = 0; j < gridSizeY + 1; j++) {
-          var shouldSkip = Math.random() < 0.1; // 10% chance to skip
+          var shouldSkip = false//Math.random() < 0.1; // 10% chance to skip
           if (shouldSkip) {
             grid.current[i][j] = null;
             continue;
           }
-          var xMin = i * squareSize + padding
-          var yMin = j * squareSize + padding
+          var xMin = i * squareSize - (squareSize / 2) + padding;
+          var xMax = i * squareSize - (squareSize / 2) - padding;
+          var yMin = j * squareSize - (squareSize / 2) + padding;
+          var yMax = j * squareSize - (squareSize / 2) - padding;
           var randomX = xMin + Math.floor(Math.random() * (squareSize - padding * 2))
           var randomY = yMin + Math.floor(Math.random() * (squareSize - padding * 2))
           grid.current[i][j] = {
-            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 15, 20),
+            path: randomBubble(new paper.Point(randomX, randomY), props.filter, 10,20),
             tOffset: Math.random() * 1000
           };
+          
         }
       }
     } else {
@@ -57,10 +60,27 @@ export function PaperBubbleFloat(props) {
             var path = paper.project.activeLayer.addChild(bubbleData.path)
             path.fillColor = getColor(props.filter)
             grid.current[i][j].path = path
+
           }
         }
       }
     }
+
+    // debug drawing!
+    // for (let i = 0; i < gridSizeX + 1; i++) {
+    //   for (let j = 0; j < gridSizeY + 1; j++) {
+    //     var xStart = i * squareSize - (squareSize / 2) + padding;
+    //     var yStart = j * squareSize - (squareSize / 2) + padding;
+    //     var xEnd = xStart + squareSize - padding;
+    //     var yEnd = yStart + squareSize - padding;
+    //     var rect = new paper.Path.Rectangle(
+    //       new paper.Point(xStart, yStart),
+    //       new paper.Point(xEnd, yEnd)
+    //     );
+    //     rect.strokeWidth = 10;
+    //     rect.strokeColor = "red";
+    //   }
+    // }
 
     console.log("Paper.js setup complete");
 
@@ -70,7 +90,7 @@ export function PaperBubbleFloat(props) {
         for (let j = 0; j < gridSizeY + 1; j++) {  
           let bubble = grid.current[i][j]
           if (bubble) {
-            let offset = new paper.Point(0,(Math.sin((event.time * 0.8) + (bubble.tOffset)))/(Math.random() + 2));
+            let offset = new paper.Point(0,(Math.sin((event.time * 0.8) + (bubble.tOffset)))/(5));
             bubble.path.position = bubble.path.position.add(offset);
           }
         }

@@ -1,7 +1,7 @@
 @import '../vars.css';
 
 .contentWrapper {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
   flex-grow: 1;
   place-items: center;
@@ -11,23 +11,22 @@
 }
 
 .title {
-  font-size: clamp(4rem, 5vw, 6rem);
+  font-size: clamp(4rem, 4vw, 5.5rem);
   text-align: center;
   font-family: 'Solway';
-  font-weight: 400;
+  font-weight: 500;
   color:#333;
-  line-height: 90%;
-  text-shadow: 0px 2px 3px #78787889;
-  white-space: pre-wrap;
+  line-height: 95%;
+  /* text-shadow: 0px 2px 3px #78787889; */
 }
 
 .subtitle {
-  font-size: clamp(1.2rem, 4vw, 2rem);
+  font-size: clamp(1.5rem, 4vw, 2rem);
   text-align: center;
   font-family: 'Solway';
   font-weight: 400;
   color:#383838;
-  text-shadow: 0px 1px 1px #78787889;
+  /* text-shadow: 0px 1px 1px #78787889; */
 }
 
 .overviewGrid {
@@ -42,6 +41,7 @@
 .imageContainer {
   width: 100%; /* Or a fixed width, e.g., 300px */
   height: 100%; /* Set a specific height for the div */
+  max-height: 50vh;
   overflow: hidden; /* Hides any overflowing parts of the image */
   border-radius: 15px;
   box-shadow: var(--box-shadow);
@@ -76,7 +76,7 @@
 
 .skills {
   width: 100%;
-  flex-grow: 2;
+  flex-grow: 1;
   background-color: white;
   border-radius: 15px;
   box-sizing: border-box;
@@ -87,11 +87,12 @@
 .content {
   width: 100vw;
   background-color: white;
-  margin-top: 2em;
+  margin-top: 4em;
+  box-shadow: 10px 4px 8px 10px rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0);
 }
 
 .markdownContent {
-  width: 70%;
+  max-width: 1000px;
   margin: auto;
   font-size: 1.2rem;
   color:#303030;
@@ -99,15 +100,44 @@
   line-height: 1.6;
 }
 
-a, a:visited, a:active {
-  color:#343434;
+.markdownContent img {
+  min-width: 0;
+  max-width: 85%;
+  max-height: 80vh;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
-p {
-  margin-bottom: 35px; /* Adds space between paragraphs */
+.markdownContent em {
+  color: #888;
+  text-align: center;
+  display: block;
 }
+
+.markdownContent li {
+  margin-left: 4rem;
+}
+
+.markdownContent b {
+  color: var(--ux-color);
+}
+
+.markdownContent p {
+  margin-bottom: 2rem; /* Adds space between paragraphs */
+}
+
+.markdownContent h1,h2,h3 {
+  margin-bottom: 1.5rem;
+}
+
+
 
 @media (max-width: 900px) {
+  .title {
+    overflow-wrap: anywhere
+  }
 
   .subtitle {
     width: 100%;
@@ -115,23 +145,31 @@ p {
 
   .contentWrapper {
     gap: 3rem;
-    padding: 0px 20px 20px 20px;
+    padding: 50px 20px 20px 20px;
   }
 
   .overviewGrid {
-    grid-template-columns:auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
     gap: 2rem;
   }
 
   .markdownContent {
     width: 100%;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
     box-sizing: border-box;
   }
 
+  .markdownContent img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
   .gridRight {
-    gap: 10px;
+    gap: 1.5rem;
   }
 }

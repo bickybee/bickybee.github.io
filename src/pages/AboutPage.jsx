@@ -4,7 +4,7 @@ export function AboutPage() {
     return (
     <div className={styles.contentWrapper}>
         <div className={styles.gridItem1}>
-            <img src="/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
+            <img src="/media/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!"/>
         </div>
         <div className={styles.gridItem2 + " fade-in"}>
             <div className={styles.aboutGrid}>

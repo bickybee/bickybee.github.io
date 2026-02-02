@@ -3,8 +3,8 @@ export const PROJECTS = [
     id: "superCodeSaga",
     title: "SuperCode Saga",
     context: "Educational Game Development @ Creatubbles",
-    tagline: "Teaching computer science through narrative-driven game experiences.",
-    previewImage: "/entity-emporium.png",
+    tagline: "Teaching computer science through narrative-driven games.",
+    previewImage: "/media/entity-emporium.png",
     contentPath: "/copy/supercode.md",
     tags: ["education", "programming", "game", "ux"],
     skills: [
@@ -16,7 +16,7 @@ export const PROJECTS = [
     details: [
       { heading: "Where?", content: "Creatubbles"},
       { heading: "When?", content: "2023 - present"},
-      { heading: "What?", content: "Educational Game Developer (wearing many hats!)"}
+      { heading: "Role:", content: "Educational Game Developer (amongst other things!)"}
     ]
   },
   {
@@ -25,7 +25,7 @@ export const PROJECTS = [
     context: "Game Programming @ Behaviour Interactive",
     tagline: "A dinosaur-collecting action game set in the Jurassic World universe.",
     tags: ["programming", "game"],
-    previewImage: "/jurassic-roster.png",
+    previewImage: "/media/jurassic-roster.png",
     contentPath: "/copy/jurassic.md",
     skills: [
       { type: "game", subSkills: ["Unity", "Mobile"]},
@@ -34,7 +34,7 @@ export const PROJECTS = [
     details: [
       { heading: "Where?", content: "Behaviour Interactive"},
       { heading: "When?", content: "2020 - 2022"},
-      { heading: "What?", content: "Gameplay Programmer"}
+      { heading: "Role:", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -43,7 +43,7 @@ export const PROJECTS = [
     context: "Game Programming @ Behaviour Interactive",
     tagline: "An unannounced project built in Unreal Engine.",
     tags: ["programming", "game"],
-    previewImage: "/unreal.jpg",
+    previewImage: "/media/unreal.jpg",
     contentPath: "/copy/unreal.md",
     skills: [
       { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"]},
@@ -52,7 +52,7 @@ export const PROJECTS = [
     details: [
       { heading: "Where?", content: "Behaviour Interactive"},
       { heading: "When?", content: "2022 - 2023"},
-      { heading: "What?", content: "Gameplay Programmer"}
+      { heading: "Role:", content: "Gameplay Programmer"}
     ]
   },
   {
@@ -61,7 +61,7 @@ export const PROJECTS = [
     context: "Graduate Research @ University of Toronto",
     tagline: "Human-computer interaction research and prototyping novel interaction techniques.",
     tags: ["programming", "ux"],
-    previewImage: "/space-time2.png",
+    previewImage: "/media/space-time.png",
     contentPath: "/copy/space-time.md",
     skills: [
       { type: "ux", subSkills: ["UX Research", "Prototyping", "Usability Testing"]},
@@ -70,7 +70,7 @@ export const PROJECTS = [
     details: [
       { heading: "Where?", content: "University of Toronto"},
       { heading: "When?", content: "2018 - 2020"},
-      { heading: "What?", content: "Graduate Student Researcher"}
+      { heading: "Role:", content: "Graduate Student Researcher"}
     ]
   },
   {
@@ -79,7 +79,7 @@ export const PROJECTS = [
     context: "Personal Work",
     tagline: "The website you're looking at right now, built with React and Paper.js.",
     tags: ["programming", "ux"],
-    previewImage: "/unreal.jpg",
+    previewImage: "/media/vicky-portrait-square.png",
     contentPath: "/copy/unreal.md",
     skills: [
       { type: "ux", subSkills: ["Figma", "Web Design"]},
@@ -88,42 +88,24 @@ export const PROJECTS = [
     details: [
       { heading: "Where?", content: "On the Internet"},
       { heading: "When?", content: "2026"},
-      { heading: "What?", content: "Everything"}
-    ]
-  },
-  {
-    id: "misc",
-    title: "Misc. Interactive ",
-    context: "Personal Work",
-    tagline: "Smaller interactive projects and experiments.",
-    tags: ["game","programming", "ux"],
-    previewImage: "/unreal.jpg",
-    contentPath: "/copy/unreal.md",
-    skills: [
-      { type: "ux", subSkills: ["Figma", "web design"]},
-      { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
-    ],
-    details: [
-      { heading: "Where?", content: "On the Internet"},
-      { heading: "When?", content: "Ongoing"},
-      { heading: "What?", content: "Everything"}
+      { heading: "Role:", content: "Creator!"}
     ]
   },
   {
     id: "art",
-    title: "Illustration",
-    role: "Personal Work",
+    title: "Artwork",
+    context: "Personal Work",
     tagline: "Collected illustrations, animations, and artwork.",
     tags: ["art"],
-    previewImage: "/temp-bg.png",
+    previewImage: "/media/tastys-blue.png",
     contentPath: "/copy/art.md",
     skills: [
       { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"]},
     ],
     details: [
-      { heading: "Where?", content: "On the Internet"},
+      { heading: "Where?", content: "Online, on walls, on paper."},
       { heading: "When?", content: "Ongoing"},
-      { heading: "What?", content: "Everything"}
+      { heading: "Role:", content: "Artist"}
     ]
   }
 ];

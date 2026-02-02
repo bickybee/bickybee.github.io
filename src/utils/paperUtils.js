@@ -7,7 +7,6 @@ let colorIndex = 0;
 export function randomBubble(startPoint, filter, minSize=5, maxSize=10, randomColor=false, sizeMultiplier=1) {
     var clampedMultiplier = 1 //Math.min(sizeMultiplier, 8)
     var radius = ((minSize + Math.random() * maxSize) * clampedMultiplier);
-    console.log(radius)
     var path = new paper.Path.Circle(startPoint, radius);
 
     path.strokeWidth = 10;
