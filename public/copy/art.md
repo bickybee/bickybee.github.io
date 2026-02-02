@@ -13,13 +13,10 @@ I've worked with StreetARToronto and Bell Box Murals to create public artworks i
 ![Alt text](/media/art/sheep1.jpg)
 *Do Androids Dream of Electric Sheep? For StreetARToronto.*
 
-![Alt text](/media/art/tea1.jpg)
-*Do Androids Dream of Electric Sheep? For StreetARToronto.*
+![Alt text](/media/art/tea-collage.png)
+*Time for Tea! For Bell Box Murals.*
 
-![Alt text](/media/art/tea2.jpg)
-*Do Androids Dream of Electric Sheep? For StreetARToronto.*
-
-![Alt text](/media/art/squiggle.jpg)
-*Do Androids Dream of Electric Sheep? For StreetARToronto.*
+![Alt text](/media/art/tastys.png)
+*Tasty's Fruit Snacks vector packaging mock-up.*
 
 Some art yayaya.
