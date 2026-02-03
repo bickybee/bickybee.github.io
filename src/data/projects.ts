@@ -95,9 +95,9 @@ export const PROJECTS = [
     id: "art",
     title: "Artwork",
     context: "Personal Work",
-    tagline: "Collected illustrations, animations, and artwork.",
+    tagline: "Selected sketches, illustreations, and murals.",
     tags: ["art"],
-    previewImage: "/media/tastys-blue.png",
+    previewImage: "/media/art/bun-tringles.jpg",
     contentPath: "/copy/art.md",
     wideImages: true,
     skills: [

@@ -16,7 +16,7 @@ export const TYPE_CONFIGS = {
     color: "#82b333"
   },
   art: {
-    text: "Illustration",
+    text: "Art",
     color: "#9538ec"
   }
 }

@@ -1,5 +1,5 @@
 CURRENT:
-- [ ] complete Art page
+- [x] complete Art page
 
 THEN:
 - [ ] complete Jurassic page
@@ -15,6 +15,7 @@ NEXT:
 - [ ] fix vector portrait
 
 POLISH
+- [ ] separate tagline VS project page subtitle
 - [ ] bubbles improvements
     - [ ] create data type to track bubble's origin regardless of anim
     - [ ] make bubbles interact with cursor motion
