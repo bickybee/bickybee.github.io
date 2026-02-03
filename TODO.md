@@ -1,18 +1,22 @@
 CURRENT:
-- [x] complete Art page
+- [x] complete Website page
+- [x] complete Jurassic page
+- [x] complete Space-Time Maps page
+- [ ] complete SuperCode page
 
 THEN:
-- [ ] complete Jurassic page
-- [ ] complete Website page
-- [ ] complete Space-Time Maps page
-- [ ] complete SuperCode page
+- [ ] spell-check / editing
+- [ ] bold&link formatting
+- [ ] image subtitles and alt text
 - [ ] fix responsive about page
+- [ ] fix responsive menu
+- [ ] fix 
 
 NEXT:
-- [ ] window size change -> fix paper bubbles
+- [ ] fix vector portrait
 - [ ] resume bolding
 - [ ] resume remove location
-- [ ] fix vector portrait
+- [ ] window size change -> fix paper bubbles
 
 POLISH
 - [ ] separate tagline VS project page subtitle

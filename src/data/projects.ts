@@ -80,7 +80,7 @@ export const PROJECTS = [
     tagline: "The website you're looking at right now, built with React and Paper.js.",
     tags: ["programming", "ux"],
     previewImage: "/media/vicky-portrait-square.png",
-    contentPath: "/copy/unreal.md",
+    contentPath: "/copy/website.md",
     skills: [
       { type: "ux", subSkills: ["Figma", "Web Design"]},
       { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
@@ -88,7 +88,7 @@ export const PROJECTS = [
     details: [
       { iconKey: "where", content: "On the Internet"},
       { iconKey: "when", content: "2026"},
-      { iconKey: "role", content: "Creator!"}
+      { iconKey: "role", content: "Designer & Developer"}
     ]
   },
   {
