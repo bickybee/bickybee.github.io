@@ -4,7 +4,7 @@ export const PROJECTS = [
     title: "SuperCode",
     context: "Educational Game Development @ Creatubbles",
     tagline: "Teaching computer science through narrative-driven games.",
-    previewImage: "/media/entity-emporium.png",
+    previewImage: "/media/projects/supercode.png",
     contentPath: "/copy/supercode.md",
     tags: ["education", "programming", "game", "ux"],
     skills: [
@@ -25,7 +25,7 @@ export const PROJECTS = [
     context: "Game Programming @ Behaviour Interactive",
     tagline: "A dinosaur-collecting action game set in the Jurassic World universe.",
     tags: ["programming", "game"],
-    previewImage: "/media/jurassic-roster.png",
+    previewImage: "/media/projects/jurassic.png",
     contentPath: "/copy/jurassic.md",
     skills: [
       { type: "game", subSkills: ["Unity", "Mobile"]},
@@ -43,7 +43,7 @@ export const PROJECTS = [
     context: "Game Programming @ Behaviour Interactive",
     tagline: "An unannounced project built in Unreal Engine.",
     tags: ["programming", "game"],
-    previewImage: "/media/unreal.jpg",
+    previewImage: "/media/projects/unreal.jpg",
     contentPath: "/copy/unreal.md",
     skills: [
       { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"]},
@@ -61,7 +61,7 @@ export const PROJECTS = [
     context: "Graduate Research @ University of Toronto",
     tagline: "Human-computer interaction research and prototyping novel interaction techniques.",
     tags: ["programming", "ux"],
-    previewImage: "/media/space-time.png",
+    previewImage: "/media/projects/spacetime.png",
     contentPath: "/copy/space-time.md",
     skills: [
       { type: "ux", subSkills: ["UX Research", "Prototyping", "Usability Testing"]},
@@ -79,7 +79,7 @@ export const PROJECTS = [
     context: "Personal Work",
     tagline: "The website you're looking at right now, built with React and Paper.js.",
     tags: ["programming", "ux"],
-    previewImage: "/media/vicky-portrait-square.png",
+    previewImage: "/media/projects/personal-site.png",
     contentPath: "/copy/website.md",
     skills: [
       { type: "ux", subSkills: ["Figma", "Web Design"]},
@@ -97,7 +97,7 @@ export const PROJECTS = [
     context: "Personal Work",
     tagline: "Selected sketches, illustreations, and murals.",
     tags: ["art"],
-    previewImage: "/media/art/bun-tringles.jpg",
+    previewImage: "/media/projects/art.jpg",
     contentPath: "/copy/art.md",
     wideImages: true,
     skills: [

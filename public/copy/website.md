@@ -24,7 +24,7 @@ The 5 discipline buttons on the homepage serve two functions:
 
 I realized later on that the 5 disciplines can correspond to the 5 letters of my name, resulting in my logo:
 
-![Alt text](/media/logo2.png)
+![Alt text](/media/logo.png)
 
 It's me: I'm made up of all these things!
 
@@ -36,7 +36,7 @@ Figma was a great tool for mocking up and iterating upon all of my design ideas,
 
 The homepage was straightforward, but the about and project pages gave me a lot more trouble. Here are some variations I experimented with for the projects, which didn't always respond well depending on the project contents.
 
-![Alt text](/media/figma.png)
+![Alt text](/media/personal-site/figma.png)
 
 # The Implementation
 

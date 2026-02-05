@@ -22,7 +22,7 @@ export function Header(props){
     return (
         <header className={styles.header}>
             <div className={styles.clickable}>
-                <Link to="/"><img src="/media/logo2.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
+                <Link to="/"><img src="/media/logo.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
             </div>
             <div className={styles.right}>
                 <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')}>
