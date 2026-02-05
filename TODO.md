@@ -5,12 +5,12 @@ CURRENT:
 - [ ] complete SuperCode page
 
 THEN:
+- [ ] separate tagline VS project page subtitle
 - [ ] spell-check / editing
 - [ ] bold&link formatting
 - [ ] image subtitles and alt text
 - [ ] fix responsive about page
 - [ ] fix responsive menu
-- [ ] fix 
 
 NEXT:
 - [ ] fix vector portrait
@@ -19,7 +19,6 @@ NEXT:
 - [ ] window size change -> fix paper bubbles
 
 POLISH
-- [ ] separate tagline VS project page subtitle
 - [ ] bubbles improvements
     - [ ] create data type to track bubble's origin regardless of anim
     - [ ] make bubbles interact with cursor motion

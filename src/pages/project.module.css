@@ -142,7 +142,8 @@
   color: var(--ux-color);
 }
 
-.markdownContent p {
+.markdownContent p, ul {
+  margin-top: 9px;
   margin-bottom: 2rem; /* Adds space between paragraphs */
 }
 

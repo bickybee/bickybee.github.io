@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     id: "superCodeSaga",
-    title: "SuperCode Saga",
+    title: "SuperCode",
     context: "Educational Game Development @ Creatubbles",
     tagline: "Teaching computer science through narrative-driven games.",
     previewImage: "/media/entity-emporium.png",
