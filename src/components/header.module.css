@@ -41,8 +41,8 @@ header img {
         position: fixed;
         top: 0;
         z-index: 10;
-        background-color: var(--off-white);
-        height: 90px;
+        background-color: white;
+        height: 60px;
     }
 
     .links {
@@ -51,7 +51,7 @@ header img {
         background-color: var(--off-white);
         color: white;
         position: fixed;
-        top: 90px; /* Adjust based on navbar height */
+        top: 60px; /* Adjust based on navbar height */
         right: 0px;
         width: 100vw;
         bottom: 0px;

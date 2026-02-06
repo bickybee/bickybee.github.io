@@ -188,6 +188,10 @@
     display: block;
   }
 
+  .markdownContent li {
+    margin-left: 1.5rem;
+  }
+
   .gridRight {
     gap: 1.5rem;
   }

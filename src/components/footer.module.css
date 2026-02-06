@@ -25,3 +25,11 @@ footer {
   justify-content: flex-start;
   align-items: center;
 }
+
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 60px;
+        box-sizing: border-box;
+        font-size: 0.8rem;
+    }
+}

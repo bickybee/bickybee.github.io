@@ -22,7 +22,6 @@
   background-color: white;
   border: #fff 20px solid;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
-  margin-top: 3%;
 }
 
 @media (max-width: 900px) {
@@ -31,22 +30,30 @@
     align-items: stretch;
 
     display: flex;
-    gap: 10%;
+    gap: 20px;
 
     justify-content: center;
     width: 100%;
+    margin-top: 20px;
   }
 
   .projectBlock {
-    width: 95%;
-    position: relative;
+    width: 100%;
+    margin: auto;
     border-radius: 20px;
-    transition: transform 0.2s;
     cursor: pointer;
     pointer-events: auto;
     background-color: white;
     border: #fff 20px solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+    transition: none;
+    box-sizing: border-box;
+  }
+
+  .projectBlock:hover{
+    cursor: pointer;
+    transform: none;
+    transition: none;
   }
 }
 
@@ -79,6 +86,7 @@
   color: white;
   font-family: 'Solway';
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .projectHeader {

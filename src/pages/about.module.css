@@ -2,64 +2,57 @@
 
 .contentWrapper {
     max-width: 1200px;
-    padding: 30px;
-
+    height: 100%;
+    margin: auto;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 0;
-    margin: auto;
+    margin: 0 5% 5% 5%;
 }
 
 .gridItem1 {
+    flex-shrink: 2;
     display: flex;
     align-items: right; /* Vertically centers content */
     justify-content: flex-end;
+    height: 60vh;
+    min-width: 0;
+    
+}
 
-    height: 50vh;
-
-    position: relative;
-    right: 3%;
-    z-index: 2;
-
-    min-width: 0px;
+.gridItem1 img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
 }
 
 .gridItem2 {
     display: flex;
     align-items: center; /* Vertically centers content */
     justify-items: center; /* Horizontally centers content */;
-
-    height: 100%;
-    left: -8%;
-
-    position: relative;
-
-    box-sizing: border-box;
-    box-shadow: var(--box-shadow);
-    border-radius: 50px;
-    background-color: white;
-}
-
-.gridItem1 img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
+    width: 100%;
 }
 
 .aboutGrid {
     display: flex;
     align-items: center; /* Vertically centers content */
     justify-items: center; /* Horizontally centers content */;
-    height: 100%;
+    height: 80%;
     width: 100%;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    border-radius: 50px;
 }
 
 .aboutContent {
-    width: 70%;
-    margin-left: 15%;
-    font-size: clamp(1rem, min(2.5vh, 2vw), 4rem);
+    margin: 8% 12% 12% 12%;
+    font-size: clamp(0.8rem, min(2vw, 2vh), 1.2rem);
     line-height: 1.6;
 }
 
@@ -74,54 +67,50 @@ p {
 h1 {
     font-family: 'Solway';
     font-size: 2.5em;
-    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 0;
 }
 
-@media (max-width: 3000px) {
+@media (max-aspect-ratio: 1/1) {
 
-.contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
+    .grid {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        margin: 0 5%  5%;
+        box-sizing: border-box;
+         /* margin: 5%; */
+         background-color: rgba(255, 255, 255, 0);
+         box-shadow: none;
+         gap: 0;
+    }
 
     .gridItem1 {
-    max-width: 60%;
-    position: relative;
-    left: 0;
-  }
+        margin: auto;
+        padding-right: 5vw;
+        z-index: 2;
+    }
 
-  .gridItem2 {
-    height: auto;
-    width: 90%;
-    aspect-ratio: auto;
-    position: relative;
-    left: 0;
-    top: -18vw;
-  }
+    .gridItem2 {
+        box-sizing: border-box;
+        position: relative;
+        top: -22vw;
+    }
 
-  .aboutContent {
-    height: 70%;
-    width: 75%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20%;
-    margin-bottom: 10%;
-    font-size: clamp(1rem, 4vw, 1.3rem);
-    line-height: 1.6;
-}
+    .aboutGrid {
+        height: 70%;
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
 
-.gridItem1 img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-}
+    .aboutContent {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        line-height: 1.6;
+    }
 
-h1 {
-    font-family: 'Solway';
-    font-size: 2em;
-    margin: 0;
-}
+    h1 {
+        font-family: 'Solway';
+        font-size: 2em;
+        margin: 0;
+    }
 }
