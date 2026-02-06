@@ -1,18 +1,11 @@
 CURRENT:
-- [x] complete Website page
-- [x] complete Jurassic page
-- [x] complete Space-Time Maps page
-- [ ] complete SuperCode page
+- [ ] deploy to github pages
+- [ ] hook up domain name
+- [ ] responsive ul li css
+- [ ] better scroll position during navigation 
+- [ ] separate tagline VS project page subtitle
 
 THEN:
-- [ ] separate tagline VS project page subtitle
-- [ ] spell-check / editing
-- [ ] bold&link formatting
-- [ ] image subtitles and alt text
-- [ ] fix responsive about page
-- [ ] fix responsive menu
-
-NEXT:
 - [ ] fix vector portrait
 - [ ] resume bolding
 - [ ] resume remove location

@@ -13,24 +13,24 @@ My main contributions were in the meta-game, collaborating closely with both Gam
 
 The World Map was the main hub of the game, acting as the main entrypoint into all the menus as well as the main gameplay. An entirely different version of the map, with additional UI, was used for time-limited events.
 
-![Alt text](/media/jurassic/map-default.png)
+![The World Map of the Jurassic World: Primal Ops game.](/media/jurassic/map-default.png)
 *The World Map was the first thing players would see once the game booted up!*
 
-![Alt text](/media/jurassic/map-event.png)
+![The Time-Limited Event version of the World Map for the Jurassic World: Primal Ops game.](/media/jurassic/map-event.png)
 *The flashy TLE-version of the World Map.*
 
 ## Squad Missions
 
 Players could send out members of their Handler team and Dinosaur roster on timed Squad Missions, a kind of idle gameplay, to gather extra loot. Each Squad Mission had specific requirements, dictating which Handlers and Dinosaurs were eligible to be sent out. 
 
-![Alt text](/media/jurassic/squad-missions.png)
+![The Squad Missions overview screen, displaying all the currently active or available missions.](/media/jurassic/squad-missions.png)
 *The main Squad Missions screen. Click on GO to open up the Mission Setup screen!*
 
 ## Mission Setup
 
 The Mission Setup screen is where players learn more about each Mission and set up their team composition before embarking. This screen was used for both regular playable Missions and Squad Missions, and many UI components were reused in other parts of the game, such as the Sanctuary where you level up your team.
 
-![Alt text](/media/jurassic/mission-setup.png)
+![The Mission setup screen.](/media/jurassic/mission-setup.png)
 *There was tons of data to display on the Mission Setup screen.*
 
 ## The Rest

@@ -2,9 +2,9 @@
 
 [**SuperCode**](https://www.supercodeclub.com/) is a learn-to-code platform for kids ages 8 and up. At the core of the platform is a 3D sandbox environment where anyone can create their own interactive 3D Worlds, coding them into games and interactive experiences by using Lua.
 
-![Alt text](/media/supercode/hero.gif)
+![Animated screen-caps of various parts of SuperCode: coding, playing games, building, and so on.](/media/supercode/hero.gif)
 
-Building upon this sandbox environment, we've created collections of narrative-driven educational games where students follow stories set in the SuperCode Universe and solve problems with code.
+Built upon this sandbox environment are collections of narrative-driven educational games. Students meet the characters of the SuperCode Universe, learning about computer-science alongside them and solving problems with code.
 
 # My Contributions
 
@@ -18,7 +18,7 @@ In this role, my major responsibilities are to:
 
 As part of our pedagogical philosophy, we engage students by creating fun, immersive settings for learning, and by using narrative to craft meaningful problems to solve. As such, the general game-feel and narrative-flow are my concern as well!
 
-To this end, and because we're a small team, I also contribute significantly to the following:
+To this end, and because we're a small team, I also contribute to the following, in collaboration with fellow designers and engineers:
 
 - Narrative design
 - Level design
@@ -30,19 +30,21 @@ To this end, and because we're a small team, I also contribute significantly to 
 
 **Code Missions** was our first collection of educational games, currently in use by public school-boards, private schools, and STEM learning centers. The Missions leverage an in-game, runtime Lua editor to intertwine coding with gameplay, as well as bespoke mini-games designed for different topics. I designed and developed 17 of the 31 Missions in this collection.
 
-![Alt text](/media/supercode/missions-loops.gif)
+![An animated screen-cap of a Code Mission where players edit a while loop to pull weeds for an NPC.](/media/supercode/missions-loops.gif)
 *Practicing while loop syntax to automating repetitive tasks for gardeners on a strange island.*
 
-![Alt text](/media/supercode/missions-data.gif)
+![An animated screen-cap of a Code Mission where players rearrange data on a giant screen.](/media/supercode/missions-data.gif)
 *Unscrambling espionage data as part of a fill-in-the-blanks activity, to help drive home the concept of data types.*
 
 Over 10,000 missions have been completed by students (and their teachers)!
 
 ## SuperCode Saga
 
-**SuperCode Saga** combines the core gameplay of Code Missions with a new game-mode called Activities, interactive tutorials that combine sandbox-style building with guided, story-driven learning. This time around, I oversaw development of the SuperCode Saga project as a whole, creating the high-level outline of games, writing briefs for each game, delegating responsibilities as we moved into production, and overseeing cohesiveness across the pipeline.
+**SuperCode Saga** combines the core gameplay of Code Missions with a new game-mode called Activities, interactive tutorials that merge sandbox-style building with guided, story-driven learning.
 
-![Alt text](/media/supercode/activity.gif)
+![An animated screen-cap of a SuperCode Saga Activity where players add music speakers to a world in edit-mode, code them to play music, and enter the world to confirm that the music is playing, congratulated by dancing NPCs."](/media/supercode/activity.gif)
 *The first Activity of the SuperCode Saga, set in a mysterious place called "The Rift" where reality can be altered and "hacked" to their will!*
+
+This time around, I oversaw development of the SuperCode Saga project as a whole, creating the high-level outline of games, writing briefs for each game, delegating responsibilities as we moved into production, and overseeing cohesiveness across the pipeline.
 
 SuperCode Saga is currently in the process of being deployed to classrooms across North America!
