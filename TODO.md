@@ -1,5 +1,5 @@
 CURRENT:
-- [ ] deploy to github pages
+- [x] deploy to github pages
 - [ ] hook up domain name
 - [ ] responsive ul li css
 - [ ] better scroll position during navigation 
