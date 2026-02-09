@@ -1,6 +1,6 @@
 # Selected Artworks
 
-I've been drawing since I could hold a pencil. It's primarily a hobby, though I've created illustrations for posters and album art in the past, and love to paint murals. The tastes and skills I've developed in visual art over the years have heavily informed my design skills.
+I've been drawing since I could hold a pencil. I've created illustrations for posters and album art and love to paint murals. The tastes and skills I've developed in visual art over the years have heavily informed my design skills.
 
 Here you'll find a fairly random assortment of artwork that I've created over the last few years. A dedicated art portfolio website is WIP! You can also take a look at my instagram to see my latest: [**@bickydoodles**](https://www.instagram.com/bickydoodles)
 

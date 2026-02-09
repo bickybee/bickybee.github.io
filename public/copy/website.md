@@ -8,12 +8,12 @@ Every few years I build a new personal website. The goals are:
 
 The biggest challenge is deciding how to convey my varied skills and experiences in one place. This includes asking myself the question: **should** it all go in one place?
 
-Being so multidisciplinary is seen as a boon to some and a fault to many. I've decided to lean in anyway.
+Being so multidisciplinary is a double-edged sword: it's seen as a boon to some and a fault to others. I've decided to lean in anyway!
 
 # The Design
 
 ## Visual Themes
-Not only did I decide to include all the disciplines in the website, this variety became the core visual theme of the site
+Not only did I decide to include all the disciplines in the website, this variety is its core visual theme.
 
 Each discipline is given its own color, resulting in the website's colour scheme. People may visit my website for different reasons -- ideally, the colors will lead them to the information that they're searching for. Follow pink for programming! Follow blue for game dev! Etc. etc.
 
@@ -27,11 +27,9 @@ It's me: I'm made up of all these things!
 
 I mocked up the initial designs in Figma, and returned to Figma when I found that certain pages weren't looking as I'd hoped after being populated with different project data.
 
-The final site I built in React and Javascript, pulling static data from JSON and Markdown files.
+The final site I built in React and Javascript, pulling static data from JSON and Markdown files. The background animations were built using Paper.js, a drawing library built upon HTML5 Canvas.
 
-I decided to work from scratch rather than vibe-coding the website, as one of my goals was to brush up on certain engineering skills. Now that the brushing up's been done, I'd gladly use AI tools to build more quickly the next time.
-
-The background animations were built using Paper.js, a drawing library built upon HTML5 Canvas.
+I decided to work from scratch rather than relying heavily on AI to build the website, as one of my goals was to practice front-end engineering. Now that I'm all brushed up, I'd gladly use AI tools to build more quickly the next time.
 
 # Future Work
 
