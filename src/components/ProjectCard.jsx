@@ -2,6 +2,8 @@ import { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { TagCollection } from './components.js';
 import styles from './projectCard.module.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
 export function ProjectCard(props) {
 
@@ -24,6 +26,9 @@ export function ProjectCard(props) {
             <div className= {styles.projectSubtitle}>
             {props.context}
           </div>
+        </div>
+        <div className={styles.linkOverlay}>
+          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
         </div>
       </div>
 

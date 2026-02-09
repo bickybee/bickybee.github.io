@@ -36,7 +36,7 @@ header img {
 }
 
 /* --- Mobile Styles (Media Query) --- */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .header {
         position: fixed;
         top: 0;

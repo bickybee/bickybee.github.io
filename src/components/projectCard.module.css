@@ -48,6 +48,7 @@
     border: #fff 20px solid;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
     transition: none;
+    transform: none;
     box-sizing: border-box;
   }
 
@@ -86,6 +87,17 @@
   padding: 1rem;
   color: white;
   font-family: 'Solway';
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.linkOverlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  color: white;
+  font-size: 1.5rem;
   z-index: 2;
   box-sizing: border-box;
 }
