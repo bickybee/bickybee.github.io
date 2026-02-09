@@ -29,18 +29,17 @@ export function Header(props){
                     <Link to="/" className={styles.linkPink} onClick={onLinkClick}>
                         Home
                     </Link>
-                    <div className={styles.linkBlue} onClick={onLinkClick}>
-                        <Link to="/about">About</Link>
-                    </div>
-                    <div className={styles.linkOrange} onClick={onLinkClick}>
-                        <a href="/media/Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-                    </div>
+                    <Link to="/about" className={styles.linkBlue} onClick={onLinkClick}>
+                       About
+                    </Link>
+                    <a href="/media/Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkOrange} onClick={onLinkClick}>
+                        Resume
+                    </a>
                     <div className={styles.linkGreen}>
                         <ThemeButton />
                     </div>
                 </div>
                 <div className={styles.hamburger} onClick={onHamburgerClick}>
-                    <div></div>
                     <FontAwesomeIcon icon={faBars} />
                 </div>
             </div>
