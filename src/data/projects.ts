@@ -1,4 +1,6 @@
-export const PROJECTS = [
+import type { Project } from './data.types';
+
+export const PROJECTS: Project[] = [
   {
     id: "superCodeSaga",
     title: "SuperCode",

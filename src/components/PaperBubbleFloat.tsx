@@ -1,12 +1,12 @@
 import paper from 'paper';
 import { useRef, useEffect, useState } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils.js';
+import { randomBubble, getColor } from '../utils/paperUtils.ts';
+import type { PaperProps } from './components.types.ts';
 import styles from './paper.module.css'
 
-export function PaperBubbleFloat(props) {
+export function PaperBubbleFloat({renderTime, filter}: PaperProps) {
   const canvasRef = useRef(null);
   const grid = useRef([]);
-  const renderTime = useRef(props.renderTime);
 
   useEffect(() => {
     // Get the canvas from the ref
@@ -58,7 +58,7 @@ export function PaperBubbleFloat(props) {
           var bubbleData = grid.current[i][j]
           if (bubbleData !== null) {  
             var path = paper.project.activeLayer.addChild(bubbleData.path)
-            path.fillColor = getColor(props.filter)
+            path.fillColor = getColor(filter)
             grid.current[i][j].path = path
 
           }
@@ -101,10 +101,10 @@ export function PaperBubbleFloat(props) {
       
       if (event.target) {
         console.log("mouse down")
-        event.target.fillColor = getColor(props.filter)
+        event.target.fillColor = getColor(filter)
         var hitResult = paper.project.hitTest(event.point, {fill: true})
         if (hitResult) {
-          hitResult.item.fillColor = getColor(props.filter)
+          hitResult.item.fillColor = getColor(filter)
         }  
       }
     }
@@ -120,7 +120,7 @@ export function PaperBubbleFloat(props) {
         });
       }
     };
-  }, [props.filter])//, props.renderTime]); // Refresh whenever filter changes
+  }, [filter])//, props.renderTime]); // Refresh whenever filter changes
 
   return (
     <canvas ref={canvasRef} className={styles.paperCanvas}/>

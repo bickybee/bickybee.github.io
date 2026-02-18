@@ -1,6 +1,11 @@
+import type { ProjectSkill } from '../data/data.types';
 import styles from './skills.module.css'
 
-export function SkillCollection(props) {
+interface SkillCollectionProps {
+  skills: ProjectSkill[]
+}
+
+export function SkillCollection(props: SkillCollectionProps) {
   const skills = props.skills.map(skill => (
     skill.subSkills.map(subSkill => (
         <div className={styles.skill + ' ' + styles[skill.type]} key={subSkill}>

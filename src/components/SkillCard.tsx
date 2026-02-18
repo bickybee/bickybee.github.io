@@ -1,7 +1,12 @@
-import { TYPE_CONFIGS } from '../data/constants.js';
+import { TYPE_CONFIGS } from '../data/constants.ts';
+import type { ProjectSkill } from '../data/data.types.ts';
 import styles from './skillCard.module.css'
 
-export function SkillCard(props) {
+interface SkillCardProps {
+  skill: ProjectSkill
+}
+
+export function SkillCard(props: SkillCardProps) {
   const skillData = props.skill;
   const skillFormatting = TYPE_CONFIGS[skillData.type];
   console.log(skillFormatting);

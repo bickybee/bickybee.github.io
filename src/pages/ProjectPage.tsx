@@ -2,13 +2,17 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Markdown from 'react-markdown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocationDot, faCalendarDays, faIdBadge } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot, faCalendarDays, faIdBadge, type IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './project.module.css'
 import { PROJECTS } from '../data/projects.js';
-import { SkillCollection } from '../components/components.js';
+import { SkillCollection } from '../components/components.ts';
 
-const detailsIconMap = {
+interface IconMapping {
+    [key: string]: IconDefinition;
+}
+
+const detailsIconMap: IconMapping = {
     where: faLocationDot,
     when: faCalendarDays,
     role: faIdBadge
@@ -21,7 +25,7 @@ export function ProjectPage() {
         return <div>Project not found</div>;
     }
 
-    const [projectText, setProjectText] = useState(null);
+    const [projectText, setProjectText] = useState("");
 
     useEffect(() => {
         window.scrollTo(0, 0);

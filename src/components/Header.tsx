@@ -1,12 +1,11 @@
 import styles from './header.module.css';
-import { ThemeButton } from './components.js';
+import { ThemeButton } from './components.ts';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-
-export function Header(props){
+export function Header(){
 
     const [isHamburgerOpen, setHamburgerOpen] = useState(false);
     function onHamburgerClick() {

@@ -1,15 +1,17 @@
 import { TYPE_CONFIGS } from '../data/constants';
+import type { TypeConfig } from '../data/data.types';
+import type { FilterProps } from './components.types';
 import styles from './filters.module.css'
 
-export function FilterNavigation(props) {
+export function FilterNavigation(props: FilterProps) {
   
-  function makeButton(key, config, props) {
+  function makeButton(key: string, config: TypeConfig, filter: string) {
     var className = 'button fade-in ' + styles[key];
-    if (props.filter === key)
+    if (filter === key)
     {
       className = className + ' ' + styles.selected;
     }
-    else if (props.filter !== "")
+    else if (filter !== "")
     {
       className = className + ' ' + styles.unselected;
     }
@@ -18,7 +20,7 @@ export function FilterNavigation(props) {
     </button>
   };
 
-const buttons = Object.entries(TYPE_CONFIGS).map(([key, config]) => makeButton(key, config, props));
+const buttons = Object.entries(TYPE_CONFIGS).map(([key, config]) => makeButton(key, config, props.filter));
 
   return (
     <div className={styles.buttonContainer}>

@@ -1,4 +1,6 @@
-export const TYPE_CONFIGS = {
+import type { TypeConfig } from './data.types';
+
+export const TYPE_CONFIGS: Record<string, TypeConfig> = {
   programming: {
     text: "Programming",
     color: "#f56c97"

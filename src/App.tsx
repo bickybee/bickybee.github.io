@@ -4,13 +4,13 @@ import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components
 import { TYPE_CONFIGS, THEMES } from './data/constants.ts';
 import './app.css'
 
-export const ThemeContext = createContext("float");
+export const ThemeContext = createContext(THEMES.FLOAT);
 
-function PaperCanvas(props) {
-  if (props.theme === THEMES.FLOAT) {
-    return <PaperBubbleFloat filter={props.filter} renderTime={props.renderTime} />
-  } else if (props.theme === THEMES.CURSOR) {
-    return <PaperBubbleTrail filter={props.filter} renderTime={props.renderTime} />;
+function PaperCanvas({ theme, filter, renderTime }: {theme: number, filter: string, renderTime: number}) {
+  if (theme === THEMES.FLOAT) {
+    return <PaperBubbleFloat  filter={filter} renderTime={renderTime} />
+  } else if (theme === THEMES.CURSOR) {
+    return <PaperBubbleTrail filter={filter} renderTime={renderTime} />;
   } else {
     return null;
   }
