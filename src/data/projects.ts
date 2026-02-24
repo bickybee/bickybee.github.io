@@ -8,15 +8,15 @@ export const PROJECTS = [
     contentPath: "/copy/supercode.md",
     tags: ["education", "programming", "game", "ux"],
     skills: [
-      { type: "programming", subSkills: ["Lua"]},
-      { type: "ux", subSkills: ["Figma", "Experience Design"]},
-      { type: "game", subSkills: ["Game Design", "Prototyping"]},
-      { type: "education", subSkills: ["Curriculum Development", "Instructional Design"]}
+      { type: "programming", subSkills: ["Lua"] },
+      { type: "ux", subSkills: ["Figma", "Experience Design"] },
+      { type: "game", subSkills: ["Game Design", "Prototyping"] },
+      { type: "education", subSkills: ["Curriculum Development", "Instructional Design"] }
     ],
     details: [
-      { iconKey: "where", content: "Creatubbles"},
-      { iconKey: "when", content: "2023 - present"},
-      { iconKey: "role", content: "Educational Game Developer"}
+      { iconKey: "where", content: "Creatubbles" },
+      { iconKey: "when", content: "2023 - present" },
+      { iconKey: "role", content: "Educational Game Developer" }
     ]
   },
   {
@@ -28,13 +28,13 @@ export const PROJECTS = [
     previewImage: "/media/projects/jurassic.png",
     contentPath: "/copy/jurassic.md",
     skills: [
-      { type: "game", subSkills: ["Unity", "Mobile"]},
-      { type: "programming", subSkills: ["C#", "Javascript", "Node.js", "Mocha.js (test suite)"]},
+      { type: "game", subSkills: ["Unity", "Mobile"] },
+      { type: "programming", subSkills: ["C#", "Javascript", "Node.js", "Mocha.js (test suite)"] },
     ],
     details: [
-      { iconKey: "where", content: "Behaviour Interactive"},
-      { iconKey: "when", content: "2020 - 2022"},
-      { iconKey: "role", content: "Gameplay Programmer"}
+      { iconKey: "where", content: "Behaviour Interactive" },
+      { iconKey: "when", content: "2020 - 2022" },
+      { iconKey: "role", content: "Gameplay Programmer" }
     ]
   },
   {
@@ -43,16 +43,16 @@ export const PROJECTS = [
     context: "Game Programming @ Behaviour Interactive",
     tagline: "An unannounced project built in Unreal Engine.",
     tags: ["programming", "game"],
-    previewImage: "/media/projects/unreal.jpg",
+    previewImage: "/media/projects/bhvr.jpg",
     contentPath: "/copy/unreal.md",
     skills: [
-      { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"]},
-      { type: "programming", subSkills: ["C++"]},
+      { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"] },
+      { type: "programming", subSkills: ["C++"] },
     ],
     details: [
-      { iconKey: "where", content: "Behaviour Interactive"},
-      { iconKey: "when", content: "2022 - 2023"},
-      { iconKey: "role", content: "Gameplay Programmer"}
+      { iconKey: "where", content: "Behaviour Interactive" },
+      { iconKey: "when", content: "2022 - 2023" },
+      { iconKey: "role", content: "Gameplay Programmer" }
     ]
   },
   {
@@ -64,13 +64,13 @@ export const PROJECTS = [
     previewImage: "/media/projects/spacetime.png",
     contentPath: "/copy/space-time.md",
     skills: [
-      { type: "ux", subSkills: ["UX Research", "Prototyping", "Usability Testing"]},
-      { type: "programming", subSkills: ["Swift", "iOS"]},
+      { type: "ux", subSkills: ["UX Research", "Prototyping", "Usability Testing"] },
+      { type: "programming", subSkills: ["Swift", "iOS"] },
     ],
     details: [
-      { iconKey: "where", content: "University of Toronto"},
-      { iconKey: "when", content: "2018 - 2020"},
-      { iconKey: "role", content: "Graduate Student Researcher"}
+      { iconKey: "where", content: "University of Toronto" },
+      { iconKey: "when", content: "2018 - 2020" },
+      { iconKey: "role", content: "Graduate Student Researcher" }
     ]
   },
   {
@@ -82,13 +82,13 @@ export const PROJECTS = [
     previewImage: "/media/projects/personal-site.png",
     contentPath: "/copy/website.md",
     skills: [
-      { type: "ux", subSkills: ["Figma", "Web Design"]},
-      { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"]},
+      { type: "ux", subSkills: ["Figma", "Web Design"] },
+      { type: "programming", subSkills: ["Javascript", "React", "Paper.js", "HTML5 Canvas", "CSS"] },
     ],
     details: [
-      { iconKey: "where", content: "On the Internet"},
-      { iconKey: "when", content: "2026"},
-      { iconKey: "role", content: "Designer & Developer"}
+      { iconKey: "where", content: "On the Internet" },
+      { iconKey: "when", content: "2026" },
+      { iconKey: "role", content: "Designer & Developer" }
     ]
   },
   {
@@ -101,12 +101,12 @@ export const PROJECTS = [
     contentPath: "/copy/art.md",
     wideImages: true,
     skills: [
-      { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"]},
+      { type: "art", subSkills: ["Adobe Photoshop", "Adobe Illustrator", "Procreate"] },
     ],
     details: [
-      { iconKey: "where", content: "Online, on walls, on paper."},
-      { iconKey: "when", content: "Ongoing"},
-      { iconKey: "role", content: "Artist"}
+      { iconKey: "where", content: "Online, on walls, on paper." },
+      { iconKey: "when", content: "Ongoing" },
+      { iconKey: "role", content: "Artist" }
     ]
   }
 ];

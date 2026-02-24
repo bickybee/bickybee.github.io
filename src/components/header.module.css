@@ -6,7 +6,7 @@ header {
     padding: 2rem;
     box-sizing: border-box;
 
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -20,15 +20,16 @@ header img {
 }
 
 .links {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1.2rem;
-  gap: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 1.2rem;
 }
 
 .hamburger {
-    display: none; /* Hide hamburger on desktop */
+    display: none;
+    /* Hide hamburger on desktop */
     background: none;
     border: none;
     cursor: pointer;
@@ -46,12 +47,14 @@ header img {
     }
 
     .links {
-        display: none; /* Hide links by default on mobile */
+        display: none;
+        /* Hide links by default on mobile */
         flex-direction: column;
         background-color: var(--off-white);
         color: white;
         position: fixed;
-        top: 60px; /* Adjust based on navbar height */
+        top: 60px;
+        /* Adjust based on navbar height */
         right: 0px;
         width: 100vw;
         bottom: 0px;
@@ -76,11 +79,13 @@ header img {
     }
 
     .active {
-        display: flex; /* Show links when "active" class is applied via JS */
+        display: flex;
+        /* Show links when "active" class is applied via JS */
     }
 
     .hamburger {
-        display: block; /* Show hamburger on mobile */
+        display: block;
+        /* Show hamburger on mobile */
     }
 
     .linkGreen {

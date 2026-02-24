@@ -10,11 +10,10 @@ Built upon this sandbox environment are collections of narrative-driven educatio
 
 My primary responsibility, if I had to boil it down to just one thing, is to **deliver an enaging educational product**. I design and build interactive, educational experiences, working from the high-level product-planning and feature-definition phases down into the hands-on implementation.
 
-As is typical for a start-up environment, I wear many hats, and don't find that any one title encompasses what I do. Here are some that I've tried on for size:
+As is typical for a start-up environment, I wear many hats, and so I've taken on a hybrid title: Educational Game Developer & Product Owner.
 
-- **Educational Game Developer** --> Broad enough that it encompasses everything.
-- **Product Engineer** --> Responsible for both defining product features and building them out.
-- **Technical Game Designer** --> Responsible for both game design and technical implementation, a title familiar to games industry folks.
+- **Educational Game Developer** --> Building and designing gameplay.
+- **Product Owner** --> Responsible for defining product features and direction.
 
 Below you'll find some of the specific projects I worked on.
 
