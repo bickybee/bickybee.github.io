@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { ThemeContext } from "../App.js"
-import { THEMES, THEME_NAMES } from "../data/constants.ts"
+import { ThemeContext } from "../App"
+import { THEMES, THEME_NAMES } from "../data/constants"
 import styles from './themeButton.module.css'
 
 export function ThemeButton() {
-    let theme = useContext(ThemeContext);
+    const { theme, setTheme } = useContext(ThemeContext);
     const numThemes = Object.keys(THEMES).length;
 
     function handleClick() {

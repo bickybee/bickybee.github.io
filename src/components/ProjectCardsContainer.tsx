@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import { PROJECTS } from '../data/projects.js';
-import { ProjectCard } from './components.js';
-import type { FilterProps } from './components.types.js';
+import { PROJECTS } from '../data/projects';
+import { ProjectCard } from './components';
+import type { FilterProps } from './components.types';
 import styles from './projectCard.module.css'
 
 export function ProjectCardsContainer({ filter }: FilterProps) {

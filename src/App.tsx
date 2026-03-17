@@ -1,10 +1,20 @@
 import { Outlet } from 'react-router-dom';
-import { useState, createContext } from 'react';
-import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components/components.js';
-import { TYPE_CONFIGS, THEMES } from './data/constants.ts';
+import { useState, createContext, type Dispatch, type SetStateAction } from 'react';
+import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components/components';
+import { TYPE_CONFIGS, THEMES } from './data/constants';
 import './app.css'
 
-export const ThemeContext = createContext(THEMES.FLOAT);
+export type ThemeContextValue = {
+  theme: number;
+  setTheme: Dispatch<SetStateAction<number>>;
+};
+
+export const ThemeContext = createContext<ThemeContextValue>({
+  theme: THEMES.FLOAT,
+  setTheme: () => {
+    // no-op default; real value provided by ThemeContext.Provider
+  },
+});
 
 function PaperCanvas({ theme, filter, renderTime }: {theme: number, filter: string, renderTime: number}) {
   if (theme === THEMES.FLOAT) {
@@ -22,10 +32,10 @@ function App() {
   const [filter, setFilter] = useState("");
   const [renderTime, setRenderTime] = useState(Date.now());
 
-  const handleClick = (event) => {
-    const id = event.target.id;
+  const handleClick: React.MouseEventHandler<HTMLDivElement> = (event) => {
+    const id = (event.target as HTMLElement | null)?.id ?? "";
     if (Object.keys(TYPE_CONFIGS).includes(id)) {
-      setFilter(filter == id ? "" : id);
+      setFilter(filter === id ? "" : id);
     } else if (id === "title") {
       setFilter("");
     } else if (id === "logo") {
@@ -35,14 +45,14 @@ function App() {
   } 
 
   return (
-    <ThemeContext value={{theme, setTheme}}>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="page-wrapper fade-in" onClick={handleClick}>
         <Header />
         <Outlet context={filter}/>
         <Footer />
       </div>
     <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
-    </ThemeContext>
+    </ThemeContext.Provider>
   )
 }
 

@@ -1,4 +1,4 @@
-import { TYPE_CONFIGS } from '../data/constants.js';
+import { TYPE_CONFIGS } from '../data/constants';
 import styles from './tags.module.css'
 
 interface TagCollectionProps {

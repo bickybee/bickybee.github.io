@@ -1,10 +1,10 @@
 import { useOutletContext } from 'react-router-dom';
 import styles from './home.module.css'
-import { FilterNavigation, ProjectCardsContainer } from '../components/components.ts';
+import { FilterNavigation, ProjectCardsContainer } from '../components/components';
 
 export function HomePage() {
 
-  const filter = useOutletContext();
+  const filter = useOutletContext<string>();
 
     return (
       <div className={styles.contentWrapper}>

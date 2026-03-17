@@ -1,11 +1,18 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils.js';
+import { randomBubble, getColor } from '../utils/paperUtils';
+import type { PaperFrameEvent, PaperPointerEvent } from '../utils/paperTypes';
 import styles from './paper.module.css'
 
-export function PaperBubbleTrail(props) {
-  const canvasRef = useRef(null);
-  const bubbles = useRef(new Map());
+export function PaperBubbleTrail({
+  filter,
+  renderTime,
+}: {
+  filter: string;
+  renderTime: number;
+}) {
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const bubbles = useRef<Map<number, paper.Path>>(new Map());
 
   useEffect(() => {
     // Get the canvas from the ref
@@ -20,18 +27,18 @@ export function PaperBubbleTrail(props) {
     paper.setup(canvas);
 
     // Re-render any existing bubbles
-    for (const [id, bubble] of bubbles.current) {
-      bubble.fillColor = getColor(props.filter, true)
+    for (const bubble of bubbles.current.values()) {
+      bubble.fillColor = getColor(filter, true)
       paper.project.activeLayer.addChild(bubble)
     }
 
     console.log("Paper.js setup complete");
 
     // Animate the bubbles
-    paper.view.onFrame = (event) => {
+    paper.view.onFrame = (event: PaperFrameEvent) => {
 
       for (const [id, bubble] of bubbles.current) {
-        let offset = new paper.Point(0, Math.sin((event.time * 6) + (id * 10)));
+        const offset = new paper.Point(0, Math.sin((event.time * 6) + (id * 10)));
         bubble.position = bubble.position.add(offset);
         if (bubble.opacity < 1) {
           bubble.opacity = bubble.opacity * 0.97
@@ -40,13 +47,13 @@ export function PaperBubbleTrail(props) {
     };
 
     // Add a bubble when mouse moves
-    paper.view.onMouseMove = (event) => {
-      var sizeMultiplier = 1
-      if (event.delta.length > 10) {
-        sizeMultiplier = Math.max(1, (event.delta.length - 10) * 0.2);
+    paper.view.onMouseMove = (event: PaperPointerEvent) => {
+      let sizeMultiplier = 1
+      if ((event.delta?.length ?? 0) > 10) {
+        sizeMultiplier = Math.max(1, ((event.delta?.length ?? 0) - 10) * 0.2);
       }
       //var sizeMultiplier = Math.max(1, event.delta.length * 0.2);
-      var bubble = randomBubble(event.point, props.filter, 5, 10, true, sizeMultiplier);
+      const bubble = randomBubble(event.point, filter, 5, 10, true, sizeMultiplier);
       
       bubbles.current.set(bubble.id, bubble);
 
@@ -72,7 +79,7 @@ export function PaperBubbleTrail(props) {
         });
       }
     };
-  }, [props.filter])//, props.renderTime]); // Refresh whenever filter changes
+  }, [filter, renderTime])// Refresh whenever filter changes
 
   return (
     <canvas ref={canvasRef} className={styles.paperCanvas} />

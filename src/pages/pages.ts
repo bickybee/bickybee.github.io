@@ -1,3 +1,3 @@
-export * from './AboutPage.js';
-export * from './HomePage.js';
-export * from './ProjectPage.js';
+export * from './AboutPage';
+export * from './HomePage';
+export * from './ProjectPage';

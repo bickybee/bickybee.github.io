@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faCalendarDays, faIdBadge, type IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './project.module.css'
-import { PROJECTS } from '../data/projects.js';
-import { SkillCollection } from '../components/components.ts';
+import { PROJECTS } from '../data/projects';
+import { SkillCollection } from '../components/components';
 
 interface IconMapping {
     [key: string]: IconDefinition;

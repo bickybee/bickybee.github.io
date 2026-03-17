@@ -4,5 +4,4 @@ export interface FilterProps {
 
 export interface PaperProps extends FilterProps {
     renderTime: number;
-    theme: number;
 }
