@@ -1,11 +1,15 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils';
-import type { PaperFrameEvent, PaperPointerEvent } from '../utils/paperTypes';
-import type { PaperProps } from './components.types';
+import { randomBubble, getColor } from '../utils/paperUtils.ts';
 import styles from './paper.module.css'
 
-export function PaperBubbleFloat({renderTime, filter}: PaperProps) {
+export function PaperBubbleFloat({
+  renderTime,
+  filter,
+}: {
+  renderTime: number;
+  filter: string;
+}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const lastRenderTime = useRef<number>(renderTime);
   const grid = useRef<Array<Array<{ path: paper.Path; tOffset: number } | null>>>([]);
@@ -89,7 +93,7 @@ export function PaperBubbleFloat({renderTime, filter}: PaperProps) {
     console.log("Paper.js setup complete");
 
     // Animate the paths
-    paper.view.onFrame = (event: PaperFrameEvent) => {
+    paper.view.onFrame = (event: { count: number; time: number; delta: number }) => {
       for (let i = 0; i < gridSizeX + 1; i++) {  
         for (let j = 0; j < gridSizeY + 1; j++) {  
           const bubble = grid.current[i][j]
@@ -101,7 +105,7 @@ export function PaperBubbleFloat({renderTime, filter}: PaperProps) {
       }
     };
 
-    paper.view.onMouseDown = (event: PaperPointerEvent) => {
+    paper.view.onMouseDown = (event: paper.MouseEvent) => {
       
       if (event.target) {
         console.log("mouse down")

@@ -1,7 +1,6 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils';
-import type { PaperFrameEvent, PaperPointerEvent } from '../utils/paperTypes';
+import { randomBubble, getColor } from '../utils/paperUtils.ts';
 import styles from './paper.module.css'
 
 export function PaperBubbleTrail({
@@ -35,7 +34,7 @@ export function PaperBubbleTrail({
     console.log("Paper.js setup complete");
 
     // Animate the bubbles
-    paper.view.onFrame = (event: PaperFrameEvent) => {
+    paper.view.onFrame = (event: { count: number; time: number; delta: number }) => {
 
       for (const [id, bubble] of bubbles.current) {
         const offset = new paper.Point(0, Math.sin((event.time * 6) + (id * 10)));
@@ -47,13 +46,8 @@ export function PaperBubbleTrail({
     };
 
     // Add a bubble when mouse moves
-    paper.view.onMouseMove = (event: PaperPointerEvent) => {
-      let sizeMultiplier = 1
-      if ((event.delta?.length ?? 0) > 10) {
-        sizeMultiplier = Math.max(1, ((event.delta?.length ?? 0) - 10) * 0.2);
-      }
-      //var sizeMultiplier = Math.max(1, event.delta.length * 0.2);
-      const bubble = randomBubble(event.point, filter, 5, 10, true, sizeMultiplier);
+    paper.view.onMouseMove = (event: paper.MouseEvent) => {
+      const bubble = randomBubble(event.point, filter, 5, 10, true);
       
       bubbles.current.set(bubble.id, bubble);
 
