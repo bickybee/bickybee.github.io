@@ -1,9 +1,8 @@
-import { PROJECTS } from '../data/projects';
-import { ProjectCard } from './components';
-import type { FilterProps } from './components.types';
+import { PROJECTS } from '../../data/projects';
+import { ProjectCard } from './ProjectCard';
 import styles from './projectCard.module.css'
 
-export function ProjectCardsContainer({ filter }: FilterProps) {
+export function ProjectCardsContainer({ filter }: { filter: string }) {
 
   const allProjects = PROJECTS.filter(project => {
     return filter === "" || project.tags.includes(filter)
@@ -20,7 +19,7 @@ export function ProjectCardsContainer({ filter }: FilterProps) {
 
   return (
     <div className={styles.projectsContainer}>
-        { allProjects }
+      {allProjects}
     </div>
   );
 }

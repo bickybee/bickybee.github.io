@@ -1,4 +1,4 @@
-import { TYPE_CONFIGS } from '../data/constants';
+import { TYPE_CONFIGS } from '../../data/constants';
 import styles from './tags.module.css'
 
 interface TagCollectionProps {
@@ -8,13 +8,13 @@ interface TagCollectionProps {
 export function TagCollection(props: TagCollectionProps) {
   const tags = props.tags.map(tag => (
     <div className={styles.tag + ' ' + styles[tag]} key={tag}>
-      { TYPE_CONFIGS[tag].text }
+      {TYPE_CONFIGS[tag].text}
     </div>
   ));
 
   return (
     <div className={styles.tagContainer}>
-      { tags }
+      {tags}
     </div>
   );
 }

@@ -1,18 +1,18 @@
 import styles from './header.module.css';
-import { ThemeButton } from './components.ts';
+import { ThemeButton } from './ThemeButton';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-export function Header(){
+export function Header() {
 
     const [isHamburgerOpen, setHamburgerOpen] = useState(false);
     function onHamburgerClick() {
         setHamburgerOpen(!isHamburgerOpen);
     }
 
-    function onLinkClick(){
+    function onLinkClick() {
         setTimeout(() => {
             setHamburgerOpen(false)
         }, 10);
@@ -21,7 +21,7 @@ export function Header(){
     return (
         <header className={styles.header}>
             <div className={styles.clickable}>
-                <Link to="/"><img src="/media/logo.png" alt="Vicky Bilbily Logo" id="logo"/></Link>
+                <Link to="/"><img src="/media/logo.png" alt="Vicky Bilbily Logo" id="logo" /></Link>
             </div>
             <div className={styles.right}>
                 <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')}>
@@ -29,7 +29,7 @@ export function Header(){
                         Home
                     </Link>
                     <Link to="/about" className={styles.linkBlue} onClick={onLinkClick}>
-                       About
+                        About
                     </Link>
                     <a href="/media/Vicky_Bilbily_Resume.pdf" target="_blank" rel="noopener noreferrer" className={styles.linkOrange} onClick={onLinkClick}>
                         Resume

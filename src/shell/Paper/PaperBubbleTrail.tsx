@@ -1,15 +1,9 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils.ts';
+import { randomBubble, getColor } from '../../utils/paperUtils.ts';
 import styles from './paper.module.css'
 
-export function PaperBubbleTrail({
-  filter,
-  renderTime,
-}: {
-  filter: string;
-  renderTime: number;
-}) {
+export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, filter: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const bubbles = useRef<Map<number, paper.Path>>(new Map());
 
@@ -48,7 +42,7 @@ export function PaperBubbleTrail({
     // Add a bubble when mouse moves
     paper.view.onMouseMove = (event: paper.MouseEvent) => {
       const bubble = randomBubble(event.point, filter, 5, 10, true);
-      
+
       bubbles.current.set(bubble.id, bubble);
 
       setTimeout(() => {
@@ -57,7 +51,7 @@ export function PaperBubbleTrail({
 
       setTimeout(() => {
         bubbles.current.delete(bubble.id);
-        bubble.remove(); 
+        bubble.remove();
       }, 2000);
     }
 

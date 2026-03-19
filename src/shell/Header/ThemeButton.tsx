@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { ThemeContext } from "../App"
-import { THEMES, THEME_NAMES } from "../data/constants"
+import { ThemeContext } from "../../App"
+import { THEMES, THEME_NAMES } from "../../data/constants"
 import styles from './themeButton.module.css'
 
 export function ThemeButton() {

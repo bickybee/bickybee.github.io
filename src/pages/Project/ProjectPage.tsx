@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faCalendarDays, faIdBadge, type IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './project.module.css'
-import { PROJECTS } from '../data/projects';
-import { SkillCollection } from '../components/components';
+import { PROJECTS } from '../../data/projects';
+import { SkillCollection } from './SkillCollection';
 
 interface IconMapping {
     [key: string]: IconDefinition;
@@ -29,7 +29,7 @@ export function ProjectPage() {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        fetch(projectData.contentPath).then(res => res.text()).then( text => {
+        fetch(projectData.contentPath).then(res => res.text()).then(text => {
             setProjectText(text);
         });
         console.log('Project component mounted or updated');
@@ -37,9 +37,9 @@ export function ProjectPage() {
 
     const details = projectData.details.map(detail => (
         <div>
-            <FontAwesomeIcon icon={detailsIconMap[detail.iconKey]} size="lg"/> { detail.content }
+            <FontAwesomeIcon icon={detailsIconMap[detail.iconKey]} size="lg" /> {detail.content}
         </div>
-        ) 
+    )
     );
 
     return (
@@ -56,19 +56,19 @@ export function ProjectPage() {
                     <div className={styles.gridRight}>
                         <div className={styles.details}>
                             <h2>Key Facts</h2>
-                            { details }
+                            {details}
                         </div>
                         <div className={styles.skills}>
                             <h2>Skills & Tools</h2>
-                            <SkillCollection skills={projectData.skills}/> 
+                            <SkillCollection skills={projectData.skills} />
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div className={styles.content}>
-                <div className={styles.markdownContent + ' ' + (projectData.wideImages ?  styles.wideImg : styles.narrowImg)}>
-                        <Markdown>{projectText}</Markdown>
+                <div className={styles.markdownContent + ' ' + (projectData.wideImages ? styles.wideImg : styles.narrowImg)}>
+                    <Markdown>{projectText}</Markdown>
                 </div>
             </div>
         </div>

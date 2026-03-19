@@ -1,12 +1,12 @@
-@import '../vars.css';
+@import '../../styles/vars.css';
 
 .buttonContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.6rem;
 }
 
 .programming {
@@ -30,5 +30,5 @@
 }
 
 .unselected {
-  background-color: #bbb;
+    background-color: #bbb;
 }

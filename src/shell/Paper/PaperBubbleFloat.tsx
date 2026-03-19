@@ -1,15 +1,9 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../utils/paperUtils.ts';
+import { randomBubble, getColor } from '../../utils/paperUtils.ts';
 import styles from './paper.module.css'
 
-export function PaperBubbleFloat({
-  renderTime,
-  filter,
-}: {
-  renderTime: number;
-  filter: string;
-}) {
+export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, filter: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const lastRenderTime = useRef<number>(renderTime);
   const grid = useRef<Array<Array<{ path: paper.Path; tOffset: number } | null>>>([]);
@@ -32,14 +26,14 @@ export function PaperBubbleFloat({
 
     var squareSize = 400;
     var padding = 60;
-    var gridSizeX = Math.floor((paper.view.size.width + (squareSize/2)) / squareSize);
-    var gridSizeY = Math.floor((paper.view.size.height + (squareSize/2)) / squareSize);
+    var gridSizeX = Math.floor((paper.view.size.width + (squareSize / 2)) / squareSize);
+    var gridSizeY = Math.floor((paper.view.size.height + (squareSize / 2)) / squareSize);
 
     // if (props.renderTime !== renderTime.current) {
     //   renderTime.current = props.renderTime;
     //   grid.current = []; // reset grid to force re-generation
     // }
-    
+
     if (grid.current.length === 0) {
       // divide the page up into a grid
       for (let i = 0; i < gridSizeX + 1; i++) {
@@ -58,7 +52,7 @@ export function PaperBubbleFloat({
             path: randomBubble(new paper.Point(randomX, randomY), filter, 10, 20),
             tOffset: Math.random() * 1000
           };
-          
+
         }
       }
     } else {
@@ -94,8 +88,8 @@ export function PaperBubbleFloat({
 
     // Animate the paths
     paper.view.onFrame = (event: { count: number; time: number; delta: number }) => {
-      for (let i = 0; i < gridSizeX + 1; i++) {  
-        for (let j = 0; j < gridSizeY + 1; j++) {  
+      for (let i = 0; i < gridSizeX + 1; i++) {
+        for (let j = 0; j < gridSizeY + 1; j++) {
           const bubble = grid.current[i][j]
           if (bubble) {
             const offset = new paper.Point(0, (Math.sin((event.time * 0.8) + (bubble.tOffset))) / 5);
@@ -106,14 +100,14 @@ export function PaperBubbleFloat({
     };
 
     paper.view.onMouseDown = (event: paper.MouseEvent) => {
-      
+
       if (event.target) {
         console.log("mouse down")
         event.target.fillColor = getColor(filter)
-        var hitResult = paper.project.hitTest(event.point, {fill: true})
+        var hitResult = paper.project.hitTest(event.point, { fill: true })
         if (hitResult) {
           hitResult.item.fillColor = getColor(filter)
-        }  
+        }
       }
     }
 
@@ -131,7 +125,7 @@ export function PaperBubbleFloat({
   }, [filter, renderTime])// Refresh whenever filter changes
 
   return (
-    <canvas ref={canvasRef} className={styles.paperCanvas}/>
+    <canvas ref={canvasRef} className={styles.paperCanvas} />
   );
 };
 

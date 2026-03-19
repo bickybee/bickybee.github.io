@@ -1,10 +1,10 @@
-import { useState} from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { TagCollection } from './components.ts';
+import { TagCollection } from './TagCollection';
 import styles from './projectCard.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import type { Project } from '../data/data.types.ts';
+import type { Project } from '../../data/data.types.ts';
 
 interface ProjectCardProps {
   filter: string,
@@ -17,20 +17,20 @@ export function ProjectCard(props: ProjectCardProps) {
   if (filter !== props.filter) {
     setFilter(props.filter); // Force re-render to load content whenever filter changes
   }
-  
+
   const project = props.project;
   const path = `/${project.id}`;
   return (
-    <Link to={path} className = {styles.projectBlock}>
-      <div className = {styles.projectHeader}>
-        <div className = {styles.projectImg}>
+    <Link to={path} className={styles.projectBlock}>
+      <div className={styles.projectHeader}>
+        <div className={styles.projectImg}>
           <img src={project.previewImage} alt={project.title} width="100%" />
         </div>
         <div className={styles.textOverlay}>
-          <div className= {styles.projectTitle}>
+          <div className={styles.projectTitle}>
             {project.title}
           </div>
-            <div className= {styles.projectSubtitle}>
+          <div className={styles.projectSubtitle}>
             {project.context}
           </div>
         </div>
@@ -40,9 +40,9 @@ export function ProjectCard(props: ProjectCardProps) {
       </div>
 
       <div className={styles.projectInfo}>
-          {project.tagline}
+        {project.tagline}
 
-          <TagCollection tags={project.tags} />
+        <TagCollection tags={project.tags} />
       </div>
     </Link>
   );

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
 import { useState, createContext, type Dispatch, type SetStateAction } from 'react';
-import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './components/components';
+import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './shell/components.ts';
 import { TYPE_CONFIGS, THEMES } from './data/constants';
-import './app.css'
+import './styles/app.css'
 
 export type ThemeContextValue = {
   theme: number;
@@ -16,9 +16,9 @@ export const ThemeContext = createContext<ThemeContextValue>({
   },
 });
 
-function PaperCanvas({ theme, filter, renderTime }: {theme: number, filter: string, renderTime: number}) {
+function PaperCanvas({ theme, filter, renderTime }: { theme: number, filter: string, renderTime: number }) {
   if (theme === THEMES.FLOAT) {
-    return <PaperBubbleFloat  filter={filter} renderTime={renderTime} />
+    return <PaperBubbleFloat filter={filter} renderTime={renderTime} />
   } else if (theme === THEMES.CURSOR) {
     return <PaperBubbleTrail filter={filter} renderTime={renderTime} />;
   } else {
@@ -42,16 +42,16 @@ function App() {
       setFilter("");
       setRenderTime(Date.now());
     }
-  } 
+  }
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="page-wrapper fade-in" onClick={handleClick}>
         <Header />
-        <Outlet context={filter}/>
+        <Outlet context={filter} />
         <Footer />
       </div>
-    <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
+      <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
     </ThemeContext.Provider>
   )
 }

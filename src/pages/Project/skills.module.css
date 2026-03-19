@@ -1,4 +1,4 @@
-@import '../vars.css';
+@import '../../styles/vars.css';
 
 .skillContainer {
     display: flex;
@@ -6,20 +6,20 @@
     gap: 0.1rem;
     margin-left: 0;
     padding-left: 0;
- }
+}
 
 .skill {
-  float: left;
-  font-size: 1rem;
-  display: block;
-  border-radius: 10px;
-  border-width: 3px;
-  border-style: solid;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 8px;
-  padding-right: 8px;
-  color: white;
+    float: left;
+    font-size: 1rem;
+    display: block;
+    border-radius: 10px;
+    border-width: 3px;
+    border-style: solid;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    color: white;
 }
 
 .programming {

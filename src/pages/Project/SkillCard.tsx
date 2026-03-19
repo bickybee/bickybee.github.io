@@ -1,5 +1,5 @@
-import { TYPE_CONFIGS } from '../data/constants.ts';
-import type { ProjectSkill } from '../data/data.types.ts';
+import { TYPE_CONFIGS } from '../../data/constants.ts';
+import type { ProjectSkill } from '../../data/data.types.ts';
 import styles from './skillCard.module.css'
 
 interface SkillCardProps {
@@ -13,18 +13,18 @@ export function SkillCard(props: SkillCardProps) {
   let key = 0
   const subSkillList = skillData.subSkills.map(subSkill => (
     <li key={key++}>
-      { subSkill }
+      {subSkill}
     </li>
   ));
 
   return (
     <div className={styles.card} style={{ backgroundColor: skillFormatting.color }}>
       <div className={styles.title}>
-        { skillFormatting.text }
+        {skillFormatting.text}
       </div>
       <div className={styles.content}>
         <ul>
-          { subSkillList }
+          {subSkillList}
         </ul>
       </div>
     </div>

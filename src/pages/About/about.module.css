@@ -1,4 +1,4 @@
-@import '../vars.css';
+@import '../../styles/vars.css';
 
 .contentWrapper {
     max-width: 1200px;
@@ -19,11 +19,12 @@
 .gridItem1 {
     flex-shrink: 2;
     display: flex;
-    align-items: right; /* Vertically centers content */
+    align-items: right;
+    /* Vertically centers content */
     justify-content: flex-end;
     height: 60vh;
     min-width: 0;
-    
+
 }
 
 .gridItem1 img {
@@ -34,15 +35,21 @@
 
 .gridItem2 {
     display: flex;
-    align-items: center; /* Vertically centers content */
-    justify-items: center; /* Horizontally centers content */;
+    align-items: center;
+    /* Vertically centers content */
+    justify-items: center;
+    /* Horizontally centers content */
+    ;
     width: 100%;
 }
 
 .aboutGrid {
     display: flex;
-    align-items: center; /* Vertically centers content */
-    justify-items: center; /* Horizontally centers content */;
+    align-items: center;
+    /* Vertically centers content */
+    justify-items: center;
+    /* Horizontally centers content */
+    ;
     height: 80%;
     width: 100%;
     box-shadow: var(--box-shadow);
@@ -77,12 +84,12 @@ h1 {
         display: grid;
         grid-template-columns: none;
         grid-template-rows: auto auto;
-        margin: 0 5%  5%;
+        margin: 0 5% 5%;
         box-sizing: border-box;
-         /* margin: 5%; */
-         background-color: rgba(255, 255, 255, 0);
-         box-shadow: none;
-         gap: 0;
+        /* margin: 5%; */
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        gap: 0;
     }
 
     .gridItem1 {
