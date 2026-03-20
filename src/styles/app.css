@@ -1,0 +1,140 @@
+@import './vars.css';
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+  font-size: 16px;
+}
+
+body {
+  background: var(--off-white);
+  font-family: 'Inter';
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  scrollbar-gutter: both-edges;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Solway';
+}
+
+#root {
+  height: 100dvh;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.page-wrapper {
+  min-height: 100vh;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: 100px 1fr 100px;
+}
+
+.button {
+  border-radius: 155px;
+  font-family: "Solway";
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  vertical-align: middle;
+  color: white;
+
+  border-width: 0;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  cursor: pointer;
+  transition: transform 0.2s;
+  pointer-events: auto;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 1px #78787889;
+}
+
+.button.-wfp-hover,
+.button:hover {
+  transform: scale(1.10);
+  transition: transform 0.2s;
+}
+
+.fade-in {
+  height: 100%;
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s;
+  animation-timeline: view();
+  animation-range: entry;
+}
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .page-wrapper {
+    grid-template-rows: 1fr 60px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+  }
+}

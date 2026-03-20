@@ -1,0 +1,34 @@
+@import '../../styles/vars.css';
+
+.buttonContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.6rem;
+}
+
+.programming {
+    background-color: var(--pink);
+}
+
+.ux {
+    background-color: var(--orange);
+}
+
+.art {
+    background-color: var(--purple);
+}
+
+.game {
+    background-color: var(--blue);
+}
+
+.education {
+    background-color: var(--green);
+}
+
+.unselected {
+    background-color: #bbb;
+}

@@ -1,0 +1,48 @@
+@import '../../styles/vars.css';
+
+.tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-top: 0.7rem;
+
+}
+
+.tag {
+    float: left;
+    font-size: 1rem;
+    display: block;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: white;
+}
+
+.programming {
+    border-color: var(--pink);
+    color: var(--pink)
+}
+
+.ux {
+    border-color: var(--orange);
+    color: var(--orange)
+}
+
+.game {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.education {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.art {
+    border-color: var(--purple);
+    color: var(--purple);
+}

@@ -1,0 +1,123 @@
+@import '../../styles/vars.css';
+
+.contentWrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 0 5% 5% 5%;
+}
+
+.gridItem1 {
+    flex-shrink: 2;
+    display: flex;
+    align-items: right;
+    /* Vertically centers content */
+    justify-content: flex-end;
+    height: 60vh;
+    min-width: 0;
+
+}
+
+.gridItem1 img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.gridItem2 {
+    display: flex;
+    align-items: center;
+    /* Vertically centers content */
+    justify-items: center;
+    /* Horizontally centers content */
+    ;
+    width: 100%;
+}
+
+.aboutGrid {
+    display: flex;
+    align-items: center;
+    /* Vertically centers content */
+    justify-items: center;
+    /* Horizontally centers content */
+    ;
+    height: 80%;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    border-radius: 50px;
+}
+
+.aboutContent {
+    margin: 8% 12% 12% 12%;
+    font-size: clamp(0.8rem, min(2vw, 2vh), 1.2rem);
+    line-height: 1.6;
+}
+
+span.line {
+    display: inline-block;
+}
+
+p {
+    margin: 0
+}
+
+h1 {
+    font-family: 'Solway';
+    font-size: 2.5em;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+@media (max-aspect-ratio: 1/1) {
+
+    .grid {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: auto auto;
+        margin: 0 5% 5%;
+        box-sizing: border-box;
+        /* margin: 5%; */
+        background-color: rgba(255, 255, 255, 0);
+        box-shadow: none;
+        gap: 0;
+    }
+
+    .gridItem1 {
+        margin: auto;
+        padding-right: 5vw;
+        z-index: 2;
+    }
+
+    .gridItem2 {
+        box-sizing: border-box;
+        position: relative;
+        top: -22vw;
+    }
+
+    .aboutGrid {
+        height: 70%;
+        padding-top: 10%;
+        padding-bottom: 5%;
+    }
+
+    .aboutContent {
+        font-size: clamp(1rem, 4vw, 1.3rem);
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-family: 'Solway';
+        font-size: 2em;
+        margin: 0;
+    }
+}
