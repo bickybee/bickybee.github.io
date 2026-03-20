@@ -11,7 +11,7 @@ export function HomePage() {
     <div className={styles.contentWrapper}>
       <div className={styles.hero}>
         <div className={styles.title}>Vicky Bilbily</div>
-        <div className={styles.subtitle}>Multi-disciplinary software developer with strong UX sensibilities.</div>
+        <div className={styles.subtitle}>Multi-disciplinary software engineer with strong UX sensibilities.</div>
         <FilterNavigation filter={filter} />
       </div>
       <ProjectCardsContainer filter={filter} />

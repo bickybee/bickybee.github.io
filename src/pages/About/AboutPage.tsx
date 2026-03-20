@@ -19,7 +19,7 @@ export function AboutPage() {
                             <h1>Hi! I'm Vicky.</h1>
 
                             I love to make things. I draw from expertise in software engineering, human-computer interaction,
-                            and visual art to create experiences that are reliable, intentional, and delightful.
+                            and interactive media to create experiences that are reliable, intentional, and delightful.
                         </div>
                     </div>
                 </div>
