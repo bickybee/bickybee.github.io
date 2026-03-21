@@ -18,7 +18,7 @@ export function AboutPage() {
                         <div className={styles.aboutContent}>
                             <h1>Hi! I'm Vicky.</h1>
 
-                            I love to make things. I draw from expertise in software engineering, human-computer interaction,
+                            I love to make things. I draw from experience in software engineering, human-computer interaction,
                             and interactive media to create experiences that are reliable, intentional, and delightful.
                         </div>
                     </div>
