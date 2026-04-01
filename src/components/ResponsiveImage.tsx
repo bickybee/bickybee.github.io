@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import {
   encodePublicAssetPath,
   isRasterWebpCandidate,
@@ -28,8 +27,6 @@ export function ResponsiveImage({
   loading = 'lazy',
   fetchPriority,
 }: ResponsiveImageProps) {
-  const [loaded, setLoaded] = useState(false)
-
   if (!isRasterWebpCandidate(src)) {
     return (
       <img
@@ -66,7 +63,7 @@ export function ResponsiveImage({
   }
 
   return (
-    <picture style={{ display: 'block', width: '100%' }}>
+    <picture className="responsive-picture">
       <source type="image/webp" srcSet={srcSet} sizes={sizes} />
       <img
         id={id}
@@ -74,15 +71,10 @@ export function ResponsiveImage({
         src={fallback}
         alt={alt}
         className={className}
-        style={{
-          ...style,
-          opacity: loaded ? 1 : 0.92,
-          transition: 'opacity 0.2s ease-out',
-        }}
+        style={style}
         loading={loading}
         decoding="async"
         fetchPriority={fetchPriority}
-        onLoad={() => setLoaded(true)}
       />
     </picture>
   )

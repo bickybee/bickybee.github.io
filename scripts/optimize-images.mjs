@@ -1,14 +1,14 @@
 #!/usr/bin/env node
 /**
- * Generates WebP derivatives next to each source image using withoutEnlargement.
- * Files are named {basename}-{intrinsicWidth}.webp (actual output width, not target).
+ * Generates WebP derivatives next to each source image under public/media/projects
+ * using withoutEnlargement. Files are named {basename}-{intrinsicWidth}.webp.
  * Writes src/generated/responsiveImageManifest.json mapping master URL -> variant list.
  */
 import { readdir, unlink, writeFile, mkdir } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
 
-const ROOT = path.resolve('public/media')
+const ROOT = path.resolve('public/media/projects')
 const PUBLIC_ROOT = path.resolve('public')
 const MANIFEST_PATH = path.resolve('src/generated/responsiveImageManifest.json')
 const TARGET_WIDTHS = [600, 900, 1200]

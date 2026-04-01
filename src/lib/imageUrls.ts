@@ -4,7 +4,7 @@ export type WebpVariant = { w: number; src: string }
 
 const manifest = manifestJson as Record<string, WebpVariant[]>
 
-/** Paths in data/markdown point at PNG/JPEG masters; GIFs and SVGs stay as-is. */
+/** PNG/JPEG paths (GIF/SVG unchanged). Manifest entries exist only for /media/projects preview masters. */
 export function isRasterWebpCandidate(src: string): boolean {
   return /\.(png|jpe?g)$/i.test(src)
 }

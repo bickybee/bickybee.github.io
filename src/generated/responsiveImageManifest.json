@@ -1,1 +1,114 @@
-{}
+{
+  "/media/projects/art.jpg": [
+    {
+      "w": 600,
+      "src": "/media/projects/art-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/art-900.webp"
+    },
+    {
+      "w": 1000,
+      "src": "/media/projects/art-1000.webp"
+    }
+  ],
+  "/media/projects/bhvr-alt.jpg": [
+    {
+      "w": 600,
+      "src": "/media/projects/bhvr-alt-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/bhvr-alt-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/bhvr-alt-1200.webp"
+    }
+  ],
+  "/media/projects/bhvr.jpg": [
+    {
+      "w": 600,
+      "src": "/media/projects/bhvr-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/bhvr-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/bhvr-1200.webp"
+    }
+  ],
+  "/media/projects/jurassic.png": [
+    {
+      "w": 600,
+      "src": "/media/projects/jurassic-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/jurassic-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/jurassic-1200.webp"
+    }
+  ],
+  "/media/projects/personal-site.png": [
+    {
+      "w": 600,
+      "src": "/media/projects/personal-site-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/personal-site-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/personal-site-1200.webp"
+    }
+  ],
+  "/media/projects/spacetime.png": [
+    {
+      "w": 600,
+      "src": "/media/projects/spacetime-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/spacetime-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/spacetime-1200.webp"
+    }
+  ],
+  "/media/projects/supercode.png": [
+    {
+      "w": 600,
+      "src": "/media/projects/supercode-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/supercode-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/supercode-1200.webp"
+    }
+  ],
+  "/media/projects/unreal.jpg": [
+    {
+      "w": 600,
+      "src": "/media/projects/unreal-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/unreal-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/unreal-1200.webp"
+    }
+  ]
+}

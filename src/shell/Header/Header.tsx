@@ -2,7 +2,7 @@ import styles from './header.module.css';
 import { ThemeButton } from './ThemeButton';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { ResponsiveImage } from '../../components/ResponsiveImage';
+import { encodePublicAssetPath } from '../../lib/imageUrls';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -23,12 +23,12 @@ export function Header() {
         <header className={styles.header}>
             <div className={styles.clickable}>
                 <Link to="/">
-                    <ResponsiveImage
+                    <img
                         id="logo"
-                        src="/media/logo.png"
+                        src={encodePublicAssetPath('/media/logo.png')}
                         alt="Vicky Bilbily Logo"
-                        sizes="(max-width: 900px) 35vw, 200px"
                         loading="eager"
+                        decoding="async"
                         fetchPriority="high"
                     />
                 </Link>
