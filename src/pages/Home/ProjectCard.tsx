@@ -5,6 +5,7 @@ import styles from './projectCard.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import type { Project } from '../../data/data.types.ts';
+import { ResponsiveImage } from '../../components/ResponsiveImage';
 
 interface ProjectCardProps {
   filter: string,
@@ -24,7 +25,12 @@ export function ProjectCard(props: ProjectCardProps) {
     <Link to={path} className={styles.projectBlock}>
       <div className={styles.projectHeader}>
         <div className={styles.projectImg}>
-          <img src={project.previewImage} alt={project.title} width="100%" />
+          <ResponsiveImage
+            src={project.previewImage}
+            alt={project.title}
+            sizes="(max-width: 900px) 100vw, 34vw"
+            loading="lazy"
+          />
         </div>
         <div className={styles.textOverlay}>
           <div className={styles.projectTitle}>

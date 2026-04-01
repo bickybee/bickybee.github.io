@@ -2,6 +2,7 @@ import styles from './header.module.css';
 import { ThemeButton } from './ThemeButton';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { ResponsiveImage } from '../../components/ResponsiveImage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -21,7 +22,16 @@ export function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.clickable}>
-                <Link to="/"><img src="/media/logo.png" alt="Vicky Bilbily Logo" id="logo" /></Link>
+                <Link to="/">
+                    <ResponsiveImage
+                        id="logo"
+                        src="/media/logo.png"
+                        alt="Vicky Bilbily Logo"
+                        sizes="(max-width: 900px) 35vw, 200px"
+                        loading="eager"
+                        fetchPriority="high"
+                    />
+                </Link>
             </div>
             <div className={styles.right}>
                 <div className={styles.links + (isHamburgerOpen ? ' ' + styles.active : '')}>

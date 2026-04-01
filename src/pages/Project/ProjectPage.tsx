@@ -7,6 +7,8 @@ import { faLocationDot, faCalendarDays, faIdBadge, type IconDefinition } from '@
 import styles from './project.module.css'
 import { PROJECTS } from '../../data/projects';
 import { SkillCollection } from './SkillCollection';
+import { ResponsiveImage } from '../../components/ResponsiveImage';
+import { MarkdownBodyImage } from './MarkdownBodyImage';
 
 interface IconMapping {
     [key: string]: IconDefinition;
@@ -19,23 +21,30 @@ const detailsIconMap: IconMapping = {
 }
 
 export function ProjectPage() {
-    let { projectId } = useParams();
-    let projectData = PROJECTS.find(proj => proj.id === projectId);
+    const { projectId } = useParams();
+    const projectData = PROJECTS.find(proj => proj.id === projectId);
+    const [projectText, setProjectText] = useState("");
+
+    useEffect(() => {
+        if (!projectData) return;
+        window.scrollTo(0, 0);
+        let cancelled = false;
+        fetch(projectData.contentPath)
+            .then(res => res.text())
+            .then(text => {
+                if (!cancelled) setProjectText(text);
+            });
+        return () => {
+            cancelled = true;
+        };
+    }, [projectData?.contentPath, projectData?.id]);
+
     if (!projectData) {
         return <div>Project not found</div>;
     }
 
-    const [projectText, setProjectText] = useState("");
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        fetch(projectData.contentPath).then(res => res.text()).then(text => {
-            setProjectText(text);
-        });
-    }, []);
-
     const details = projectData.details.map(detail => (
-        <div>
+        <div key={detail.iconKey}>
             <FontAwesomeIcon icon={detailsIconMap[detail.iconKey]} size="lg" /> {detail.content}
         </div>
     )
@@ -49,7 +58,13 @@ export function ProjectPage() {
                 <div className={styles.overviewGrid + ' fade-in'}>
                     <div className={styles.gridLeft}>
                         <div className={styles.imageContainer}>
-                            <img src={projectData.previewImage}></img>
+                            <ResponsiveImage
+                                src={projectData.previewImage}
+                                alt={projectData.title}
+                                sizes="(max-width: 900px) 100vw, min(900px, 68vw)"
+                                loading="eager"
+                                fetchPriority="high"
+                            />
                         </div>
                     </div>
                     <div className={styles.gridRight}>
@@ -67,7 +82,15 @@ export function ProjectPage() {
 
             <div className={styles.content}>
                 <div className={styles.markdownContent + ' ' + (projectData.wideImages ? styles.wideImg : styles.narrowImg)}>
-                    <Markdown>{projectText}</Markdown>
+                    <Markdown
+                        components={{
+                            img: (props) => (
+                                <MarkdownBodyImage {...props} wideImages={projectData.wideImages} />
+                            ),
+                        }}
+                    >
+                        {projectText}
+                    </Markdown>
                 </div>
             </div>
         </div>

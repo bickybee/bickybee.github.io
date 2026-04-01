@@ -1,6 +1,6 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../../utils/paperUtils.ts';
+import { randomBubble, getColor, observePaperCanvasSize } from '../../utils/paperUtils.ts';
 import styles from './paper.module.css'
 
 export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, filter: string }) {
@@ -18,6 +18,8 @@ export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, f
     }
 
     paper.setup(canvas);
+    const view = paper.view;
+    const stopObservingSize = observePaperCanvasSize(canvas);
 
     // Re-render any existing bubbles
     for (const bubble of bubbles.current.values()) {
@@ -28,7 +30,7 @@ export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, f
     console.log("Paper.js setup complete");
 
     // Animate the bubbles
-    paper.view.onFrame = (event: { count: number; time: number; delta: number }) => {
+    view.onFrame = (event: { count: number; time: number; delta: number }) => {
 
       for (const [id, bubble] of bubbles.current) {
         const offset = new paper.Point(0, Math.sin((event.time * 6) + (id * 10)));
@@ -40,7 +42,7 @@ export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, f
     };
 
     // Add a bubble when mouse moves
-    paper.view.onMouseMove = (event: paper.MouseEvent) => {
+    view.onMouseMove = (event: paper.MouseEvent) => {
       const bubble = randomBubble(event.point, filter, 5, 10, true);
 
       bubbles.current.set(bubble.id, bubble);
@@ -56,11 +58,10 @@ export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, f
     }
 
 
-    // Cleanup function to remove the Paper.js project on unmount
     return () => {
+      stopObservingSize();
       if (paper.projects.length > 0) {
-        // Destroy the project associated with this canvas
-        paper.projects.forEach(project => {
+        paper.projects.forEach((project) => {
           if (project.view.element === canvas) {
             project.remove();
           }
@@ -70,7 +71,11 @@ export function PaperBubbleTrail({ renderTime, filter }: { renderTime: number, f
   }, [filter, renderTime])// Refresh whenever filter changes
 
   return (
-    <canvas ref={canvasRef} className={styles.paperCanvas} />
+    <canvas
+      ref={canvasRef}
+      className={styles.paperCanvas}
+      data-paper-resize
+    />
   );
 };
 

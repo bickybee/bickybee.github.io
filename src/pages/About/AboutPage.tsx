@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { ResponsiveImage } from '../../components/ResponsiveImage';
 import styles from './about.module.css'
 
 export function AboutPage() {
@@ -11,7 +12,13 @@ export function AboutPage() {
         <div className={styles.contentWrapper}>
             <div className={styles.grid}>
                 <div className={styles.gridItem1}>
-                    <img src="/media/vicky-portrait-square-overflow.png" alt="Vicky Bilbily self-portrait" title="Self-portrait by me!" />
+                    <ResponsiveImage
+                        src="/media/vicky-portrait-square-overflow.png"
+                        alt="Vicky Bilbily self-portrait"
+                        title="Self-portrait by me!"
+                        sizes="(max-width: 900px) 88vw, 42vw"
+                        loading="eager"
+                    />
                 </div>
                 <div className={styles.gridItem2 + " fade-in"}>
                     <div className={styles.aboutGrid}>

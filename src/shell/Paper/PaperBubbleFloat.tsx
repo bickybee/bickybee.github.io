@@ -1,7 +1,16 @@
 import paper from 'paper';
 import { useRef, useEffect } from 'react';
-import { randomBubble, getColor } from '../../utils/paperUtils.ts';
+import { randomBubble, getColor, observePaperCanvasSize } from '../../utils/paperUtils.ts';
 import styles from './paper.module.css'
+
+const squareSize = 400;
+const padding = 60;
+
+function gridDimensions(viewWidth: number, viewHeight: number) {
+  const gridSizeX = Math.floor((viewWidth + squareSize / 2) / squareSize);
+  const gridSizeY = Math.floor((viewHeight + squareSize / 2) / squareSize);
+  return { gridSizeX, gridSizeY };
+}
 
 export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, filter: string }) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -23,38 +32,42 @@ export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, f
     }
 
     paper.setup(canvas);
+    const view = paper.view;
 
-    var squareSize = 400;
-    var padding = 60;
-    var gridSizeX = Math.floor((paper.view.size.width + (squareSize / 2)) / squareSize);
-    var gridSizeY = Math.floor((paper.view.size.height + (squareSize / 2)) / squareSize);
-
-    // if (props.renderTime !== renderTime.current) {
-    //   renderTime.current = props.renderTime;
-    //   grid.current = []; // reset grid to force re-generation
-    // }
-
-    if (grid.current.length === 0) {
-      // divide the page up into a grid
+    /** Ensures every cell up to (gridSizeX, gridSizeY) exists; new cells get a bubble. */
+    function fillGridToSize(gridSizeX: number, gridSizeY: number) {
       for (let i = 0; i < gridSizeX + 1; i++) {
-        grid.current[i] = [];
+        if (!grid.current[i]) grid.current[i] = [];
         for (let j = 0; j < gridSizeY + 1; j++) {
-          var shouldSkip = false//Math.random() < 0.1; // 10% chance to skip
+          if (grid.current[i][j] !== undefined) continue;
+          const shouldSkip = false;
           if (shouldSkip) {
             grid.current[i][j] = null;
             continue;
           }
-          var xMin = i * squareSize - (squareSize / 2) + padding;
-          var yMin = j * squareSize - (squareSize / 2) + padding;
-          var randomX = xMin + Math.floor(Math.random() * (squareSize - padding * 2))
-          var randomY = yMin + Math.floor(Math.random() * (squareSize - padding * 2))
+          const xMin = i * squareSize - squareSize / 2 + padding;
+          const yMin = j * squareSize - squareSize / 2 + padding;
+          const randomX = xMin + Math.floor(Math.random() * (squareSize - padding * 2));
+          const randomY = yMin + Math.floor(Math.random() * (squareSize - padding * 2));
           grid.current[i][j] = {
             path: randomBubble(new paper.Point(randomX, randomY), filter, 10, 20),
-            tOffset: Math.random() * 1000
+            tOffset: Math.random() * 1000,
           };
-
         }
       }
+    }
+
+    function extendGridForCurrentView() {
+      const { gridSizeX, gridSizeY } = gridDimensions(view.size.width, view.size.height);
+      fillGridToSize(gridSizeX, gridSizeY);
+    }
+
+    const stopObservingSize = observePaperCanvasSize(canvas, extendGridForCurrentView);
+
+    let { gridSizeX, gridSizeY } = gridDimensions(view.size.width, view.size.height);
+
+    if (grid.current.length === 0) {
+      fillGridToSize(gridSizeX, gridSizeY);
     } else {
       for (let i = 0; i < gridSizeX + 1; i++) {
         for (let j = 0; j < gridSizeY + 1; j++) {
@@ -66,6 +79,7 @@ export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, f
           }
         }
       }
+      extendGridForCurrentView();
     }
 
     // debug drawing!
@@ -86,20 +100,22 @@ export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, f
 
     console.log("Paper.js setup complete");
 
-    // Animate the paths
-    paper.view.onFrame = (event: { count: number; time: number; delta: number }) => {
-      for (let i = 0; i < gridSizeX + 1; i++) {
-        for (let j = 0; j < gridSizeY + 1; j++) {
-          const bubble = grid.current[i][j]
+    // Animate the paths (all cells, including off-screen after a shrink)
+    view.onFrame = (event: { count: number; time: number; delta: number }) => {
+      for (let i = 0; i < grid.current.length; i++) {
+        const row = grid.current[i];
+        if (!row) continue;
+        for (let j = 0; j < row.length; j++) {
+          const bubble = row[j];
           if (bubble) {
-            const offset = new paper.Point(0, (Math.sin((event.time * 0.8) + (bubble.tOffset))) / 5);
+            const offset = new paper.Point(0, (Math.sin((event.time * 0.8) + bubble.tOffset)) / 5);
             bubble.path.position = bubble.path.position.add(offset);
           }
         }
       }
     };
 
-    paper.view.onMouseDown = (event: paper.MouseEvent) => {
+    view.onMouseDown = (event: paper.MouseEvent) => {
 
       if (event.target) {
         console.log("mouse down")
@@ -111,21 +127,24 @@ export function PaperBubbleFloat({ renderTime, filter }: { renderTime: number, f
       }
     }
 
-    // Cleanup function to remove the Paper.js project on unmount
     return () => {
+      stopObservingSize();
       if (paper.projects.length > 0) {
-        // Destroy the project associated with this canvas
-        paper.projects.forEach(project => {
+        paper.projects.forEach((project) => {
           if (project.view.element === canvas) {
             project.remove();
           }
         });
       }
     };
-  }, [filter, renderTime])// Refresh whenever filter changes
+  }, [filter, renderTime])
 
   return (
-    <canvas ref={canvasRef} className={styles.paperCanvas} />
+    <canvas
+      ref={canvasRef}
+      className={styles.paperCanvas}
+      data-paper-resize
+    />
   );
 };
 

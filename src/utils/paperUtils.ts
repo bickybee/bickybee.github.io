@@ -1,6 +1,36 @@
 import paper from 'paper';
 import { TYPE_CONFIGS } from '../data/constants';
 
+/** Keeps Paper.js view backing store aligned with the canvas layout box (avoids CSS stretching). */
+export function observePaperCanvasSize(
+  canvas: HTMLCanvasElement,
+  onAfterViewSizeSync?: () => void,
+): () => void {
+  const sync = () => {
+    const w = Math.round(canvas.clientWidth);
+    const h = Math.round(canvas.clientHeight);
+    if (w <= 0 || h <= 0) return;
+    for (let i = 0; i < paper.projects.length; i++) {
+      const view = paper.projects[i].view;
+      if (view?.element === canvas) {
+        view.viewSize = new paper.Size(w, h);
+        onAfterViewSizeSync?.();
+        break;
+      }
+    }
+  };
+
+  const resizeObserver = new ResizeObserver(() => {
+    sync();
+  });
+  resizeObserver.observe(canvas);
+  requestAnimationFrame(sync);
+
+  return () => {
+    resizeObserver.disconnect();
+  };
+}
+
 let colors: paper.Color[] = [];
 let colorIndex = 0;
 
