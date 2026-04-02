@@ -22,6 +22,24 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    id: "serious-sam",
+    title: "Serious Sam: Shatterverse",
+    context: "Game Programming @ Behaviour Interactive",
+    tagline: "The next installment in the Serious Sam franchise, built in Unreal Engine.",
+    tags: ["programming", "game"],
+    previewImage: "/media/projects/serious-sam.png",
+    contentPath: "/copy/serious-sam.md",
+    skills: [
+      { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"] },
+      { type: "programming", subSkills: ["C++"] },
+    ],
+    details: [
+      { iconKey: "where", content: "Behaviour Interactive" },
+      { iconKey: "when", content: "2022 - 2023" },
+      { iconKey: "role", content: "Gameplay Programmer" }
+    ]
+  },
+  {
     id: "jurassic",
     title: "Jurassic World: Primal Ops",
     context: "Game Programming @ Behaviour Interactive",
@@ -36,24 +54,6 @@ export const PROJECTS: Project[] = [
     details: [
       { iconKey: "where", content: "Behaviour Interactive" },
       { iconKey: "when", content: "2020 - 2022" },
-      { iconKey: "role", content: "Gameplay Programmer" }
-    ]
-  },
-  {
-    id: "unannounced",
-    title: "Unannounced Project",
-    context: "Game Programming @ Behaviour Interactive",
-    tagline: "An unannounced project built in Unreal Engine.",
-    tags: ["programming", "game"],
-    previewImage: "/media/projects/bhvr.jpg",
-    contentPath: "/copy/unreal.md",
-    skills: [
-      { type: "game", subSkills: ["Unreal Engine", "Multiplayer", "Gameplay Ability System", "Behaviour Trees"] },
-      { type: "programming", subSkills: ["C++"] },
-    ],
-    details: [
-      { iconKey: "where", content: "Behaviour Interactive" },
-      { iconKey: "when", content: "2022 - 2023" },
       { iconKey: "role", content: "Gameplay Programmer" }
     ]
   },
