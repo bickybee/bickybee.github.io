@@ -1,4 +1,18 @@
 {
+  "/media/about/vicky-portrait-square-overflow.png": [
+    {
+      "w": 600,
+      "src": "/media/about/vicky-portrait-square-overflow-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/about/vicky-portrait-square-overflow-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/about/vicky-portrait-square-overflow-1200.webp"
+    }
+  ],
   "/media/projects/art.jpg": [
     {
       "w": 600,
@@ -67,6 +81,20 @@
     {
       "w": 1200,
       "src": "/media/projects/personal-site-1200.webp"
+    }
+  ],
+  "/media/projects/serious-sam.png": [
+    {
+      "w": 600,
+      "src": "/media/projects/serious-sam-600.webp"
+    },
+    {
+      "w": 900,
+      "src": "/media/projects/serious-sam-900.webp"
+    },
+    {
+      "w": 1200,
+      "src": "/media/projects/serious-sam-1200.webp"
     }
   ],
   "/media/projects/spacetime.png": [

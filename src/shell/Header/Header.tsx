@@ -2,7 +2,7 @@ import styles from './header.module.css';
 import { ThemeButton } from './ThemeButton';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { encodePublicAssetPath } from '../../lib/imageUrls';
+import { encodePublicAssetPath } from '../../lib/encodePublicAssetPath';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 

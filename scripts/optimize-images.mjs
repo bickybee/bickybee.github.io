@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 /**
- * Generates WebP derivatives next to each source image under public/media/projects
- * using withoutEnlargement. Files are named {basename}-{intrinsicWidth}.webp.
+ * Generates WebP derivatives next to each source raster under public/media/projects
+ * and public/media/about using withoutEnlargement. Files are named {basename}-{intrinsicWidth}.webp.
  * Writes src/generated/responsiveImageManifest.json mapping master URL -> variant list.
  */
 import { readdir, unlink, writeFile, mkdir } from 'node:fs/promises'
 import path from 'node:path'
 import sharp from 'sharp'
 
-const ROOT = path.resolve('public/media/projects')
+const ROOTS = [
+  path.resolve('public/media/projects'),
+  path.resolve('public/media/about'),
+]
 const PUBLIC_ROOT = path.resolve('public')
 const MANIFEST_PATH = path.resolve('src/generated/responsiveImageManifest.json')
 const TARGET_WIDTHS = [600, 900, 1200]
@@ -64,46 +67,58 @@ async function main() {
   let fileCount = 0
   let variantCount = 0
 
-  for await (const abs of walk(ROOT)) {
-    if (!shouldProcess(abs)) continue
+  for (const root of ROOTS) {
+    try {
+      for await (const abs of walk(root)) {
+        if (!shouldProcess(abs)) continue
 
-    const dir = path.dirname(abs)
-    const stem = path.basename(abs, path.extname(abs))
-    await removeStaleWebpVariants(dir, stem)
+        const dir = path.dirname(abs)
+        const stem = path.basename(abs, path.extname(abs))
+        await removeStaleWebpVariants(dir, stem)
 
-    const masterUrl = toPublicUrl(abs)
-    /** @type { { w: number; src: string }[] } */
-    const variants = []
-    let lastWidth = -1
+        const masterUrl = toPublicUrl(abs)
+        /** @type { { w: number; src: string }[] } */
+        const variants = []
+        let lastWidth = -1
 
-    for (const tw of TARGET_WIDTHS) {
-      const { data, info } = await sharp(abs)
-        .rotate()
-        .resize({
-          width: tw,
-          fit: 'inside',
-          withoutEnlargement: true,
-        })
-        .webp(WEBP)
-        .toBuffer({ resolveWithObject: true })
+        for (const tw of TARGET_WIDTHS) {
+          const { data, info } = await sharp(abs)
+            .rotate()
+            .resize({
+              width: tw,
+              fit: 'inside',
+              withoutEnlargement: true,
+            })
+            .webp(WEBP)
+            .toBuffer({ resolveWithObject: true })
 
-      const w = info.width
-      if (w == null || w === lastWidth) continue
-      lastWidth = w
+          const w = info.width
+          if (w == null || w === lastWidth) continue
+          lastWidth = w
 
-      const outName = `${stem}-${w}.webp`
-      const outAbs = path.join(dir, outName)
-      await sharp(data).toFile(outAbs)
+          const outName = `${stem}-${w}.webp`
+          const outAbs = path.join(dir, outName)
+          await sharp(data).toFile(outAbs)
 
-      variants.push({ w, src: toPublicUrl(outAbs) })
-      variantCount += 1
+          variants.push({ w, src: toPublicUrl(outAbs) })
+          variantCount += 1
+        }
+
+        if (variants.length > 0) {
+          manifest[masterUrl] = variants
+        }
+        fileCount += 1
+        console.log(path.relative(process.cwd(), abs))
+      }
+    } catch (err) {
+      if (err && /** @type {NodeJS.ErrnoException} */ (err).code === 'ENOENT') {
+        console.error(
+          `optimize-images: skip missing directory ${path.relative(process.cwd(), root)}`
+        )
+        continue
+      }
+      throw err
     }
-
-    if (variants.length > 0) {
-      manifest[masterUrl] = variants
-    }
-    fileCount += 1
-    console.log(path.relative(process.cwd(), abs))
   }
 
   await mkdir(path.dirname(MANIFEST_PATH), { recursive: true })

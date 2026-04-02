@@ -1,30 +1,13 @@
 import manifestJson from '../generated/responsiveImageManifest.json' with { type: 'json' }
+import { encodePublicAssetPath } from './encodePublicAssetPath'
 
 export type WebpVariant = { w: number; src: string }
 
 const manifest = manifestJson as Record<string, WebpVariant[]>
 
-/** PNG/JPEG paths (GIF/SVG unchanged). Manifest entries exist only for /media/projects preview masters. */
+/** PNG/JPEG paths (GIF/SVG unchanged). Manifest covers optimized masters under /media/projects and /media/about. */
 export function isRasterWebpCandidate(src: string): boolean {
   return /\.(png|jpe?g)$/i.test(src)
-}
-
-/** Encode path segments for URLs (spaces etc. in /public filenames). */
-export function encodePublicAssetPath(assetPath: string): string {
-  if (!assetPath.startsWith('/')) {
-    return assetPath
-      .split('/')
-      .map((seg) => encodeURIComponent(seg))
-      .join('/')
-  }
-  const rest = assetPath.slice(1)
-  return (
-    '/' +
-    rest
-      .split('/')
-      .map((seg) => encodeURIComponent(seg))
-      .join('/')
-  )
 }
 
 export function getWebpVariants(masterSrc: string): WebpVariant[] | undefined {

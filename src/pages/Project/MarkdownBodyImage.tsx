@@ -1,18 +1,13 @@
 import type { ImgHTMLAttributes } from 'react'
-import { encodePublicAssetPath } from '../../lib/imageUrls'
-
-type MarkdownBodyImageProps = ImgHTMLAttributes<HTMLImageElement> & {
-  wideImages?: boolean
-}
+import { encodePublicAssetPath } from '../../lib/encodePublicAssetPath'
 
 export function MarkdownBodyImage({
   src,
   alt,
   className,
   style,
-  wideImages: _wideImages,
   ...rest
-}: MarkdownBodyImageProps) {
+}: ImgHTMLAttributes<HTMLImageElement>) {
   if (!src) return null
 
   return (

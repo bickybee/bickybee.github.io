@@ -84,9 +84,7 @@ export function ProjectPage() {
                 <div className={styles.markdownContent + ' ' + (projectData.wideImages ? styles.wideImg : styles.narrowImg)}>
                     <Markdown
                         components={{
-                            img: (props) => (
-                                <MarkdownBodyImage {...props} wideImages={projectData.wideImages} />
-                            ),
+                            img: (props) => <MarkdownBodyImage {...props} />,
                         }}
                     >
                         {projectText}

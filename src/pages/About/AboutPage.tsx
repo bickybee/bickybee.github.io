@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import styles from './about.module.css'
-import { encodePublicAssetPath } from '../../lib/imageUrls';
+import { ResponsiveImage } from '../../components/ResponsiveImage';
 
 export function AboutPage() {
 
@@ -12,12 +12,13 @@ export function AboutPage() {
         <div className={styles.contentWrapper}>
             <div className={styles.grid}>
                 <div className={styles.gridItem1}>
-                    <img
-                        src={encodePublicAssetPath('/media/vicky-portrait-square-overflow.png')}
+                    <ResponsiveImage
+                        src="/media/about/vicky-portrait-square-overflow.png"
                         alt="Vicky Bilbily self-portrait"
                         title="Self-portrait by me!"
+                        sizes="(max-width: 900px) min(90vw, 600px), min(50vw, 600px)"
                         loading="eager"
-                        decoding="async"
+                        fetchPriority="high"
                     />
                 </div>
                 <div className={styles.gridItem2 + " fade-in"}>

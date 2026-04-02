@@ -1,8 +1,5 @@
-import {
-  encodePublicAssetPath,
-  isRasterWebpCandidate,
-  webpSrcSetFromManifest,
-} from '../lib/imageUrls'
+import { encodePublicAssetPath } from '../lib/encodePublicAssetPath'
+import { isRasterWebpCandidate, webpSrcSetFromManifest } from '../lib/imageUrls'
 
 type ResponsiveImageProps = {
   src: string
