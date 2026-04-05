@@ -8,4 +8,4 @@ I ramped up quickly on Unreal Engine 5, its built-in networking and replication 
 
 In the early prototyping stages my tasks varied widely depending on prototyping needs. Later on I found my niche in enemy behaviours: I collaborated closely with technical designers on building out custom Behaviour Tree functionality.
 
-I'll fill this page out more after this game is released(supposedly 2026)!
+I'll fill this page out more after this game is released (supposedly 2026)!

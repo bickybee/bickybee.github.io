@@ -25,7 +25,7 @@ export const PROJECTS: Project[] = [
     id: "serious-sam",
     title: "Serious Sam: Shatterverse",
     context: "Game Programming @ Behaviour Interactive",
-    tagline: "The next installment in the Serious Sam franchise, built in Unreal Engine.",
+    tagline: "The next installment in the Serious Sam franchise, built for PC/console.",
     tags: ["programming", "game"],
     previewImage: "/media/projects/serious-sam.png",
     contentPath: "/copy/serious-sam.md",
