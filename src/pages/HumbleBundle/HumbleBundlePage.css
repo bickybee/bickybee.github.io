@@ -1,0 +1,393 @@
+/* Humble Bundle Page Styling - inspired by Humble Bundle's color scheme */
+
+.humble-bundle-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ========== HEADER ========== */
+
+.hb-header {
+  background-color: #2d2d2d;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid #F9B233;
+}
+
+.hb-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hb-bundle-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #F9B233;
+  margin: 0 0 10px 0;
+}
+
+.hb-bundle-tagline {
+  font-size: 1.2rem;
+  color: #E85D04;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ========== HERO SECTION ========== */
+
+.hb-hero-section {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.hb-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== DETAILS SECTION ========== */
+
+.hb-details-section {
+  background-color: #2d2d2d;
+  padding: 40px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.hb-details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hb-details-title {
+  font-size: 1.8rem;
+  color: #F9B233;
+  margin-bottom: 15px;
+}
+
+.hb-details-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #c0c0c0;
+}
+
+.hb-stats-row {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.hb-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hb-stat-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #E85D04;
+}
+
+.hb-stat-label {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin-top: 5px;
+}
+
+/* ========== WHY SECTION ========== */
+
+.hb-why-section {
+  background-color: #1a1a1a;
+  padding: 40px 20px;
+  border-bottom: 1px solid #444;
+}
+
+.hb-why-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hb-why-button {
+  width: 100%;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  background-color: #F9B233;
+  color: #1a1a1a;
+}
+
+.hb-why-button:hover {
+  background-color: #E85D04;
+}
+
+.hb-why-button.expanded {
+  background-color: #E85D04;
+}
+
+.hb-why-button-text {
+  color: #1a1a1a;
+}
+
+.hb-why-button-icon {
+  margin-left: 10px;
+  color: #1a1a1a;
+}
+
+.hb-why-expanded-content {
+  padding: 20px;
+  background-color: #2d2d2d;
+  margin-top: 10px;
+  border-radius: 4px;
+  line-height: 1.6;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== GAMES SECTION ========== */
+
+.hb-games-section {
+  background-color: #1a1a1a;
+  padding: 40px 20px;
+}
+
+.hb-games-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hb-games-title {
+  font-size: 2rem;
+  color: #F9B233;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.hb-game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ========== GAME CARD ========== */
+
+.game-card {
+  background-color: #2d2d2d;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #444;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(249, 178, 51, 0.2);
+}
+
+.game-card-header {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.game-card-header:hover {
+  background-color: #333;
+}
+
+.game-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.game-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.game-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #F9B233;
+  margin: 0 0 5px 0;
+}
+
+.game-short-desc {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin: 0 0 8px 0;
+}
+
+.game-platforms {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.platform-badge {
+  background-color: #444;
+  color: #e0e0e0;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.75rem;
+}
+
+.expand-button {
+  background-color: transparent;
+  border: none;
+  color: #F9B233;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.expand-button:hover {
+  color: #E85D04;
+}
+
+/* ========== EXPANDED GAME CARD ========== */
+
+.game-card-expanded {
+  padding: 20px 15px;
+  border-top: 1px solid #444;
+  background-color: #333;
+  animation: slideDown 0.3s ease;
+}
+
+.game-full-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #c0c0c0;
+  margin: 0 0 20px 0;
+}
+
+/* ========== VIDEO CONTAINER ========== */
+
+.video-container {
+  margin-bottom: 20px;
+}
+
+.video-embed {
+  width: 100%;
+  height: 300px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* ========== LINKS ========== */
+
+.links-container {
+  margin-top: 20px;
+}
+
+.links-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #F9B233;
+  margin: 0 0 10px 0;
+}
+
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.external-link {
+  color: #E85D04;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.external-link:hover {
+  color: #F9B233;
+}
+
+/* ========== FOOTER ========== */
+
+.hb-footer {
+  background-color: #2d2d2d;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #444;
+}
+
+.hb-footer-text {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  margin: 0 0 15px 0;
+}
+
+.hb-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hb-footer-link {
+  color: #E85D04;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.hb-footer-link:hover {
+  color: #F9B233;
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 768px) {
+  .hb-bundle-title {
+    font-size: 1.8rem;
+  }
+
+  .hb-details-title,
+  .hb-games-title {
+    font-size: 1.4rem;
+  }
+
+  .hb-hero-section {
+    height: 250px;
+  }
+
+  .hb-game-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hb-stat-number {
+    font-size: 2rem;
+  }
+}
