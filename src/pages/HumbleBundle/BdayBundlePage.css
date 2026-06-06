@@ -349,6 +349,157 @@
   color: #F9B233;
 }
 
+/* ========== PRICE SECTION ========== */
+
+.bb-price-section {
+  background-color: #2d2d2d;
+  padding: 60px 20px;
+  border-top: 1px solid #444;
+  border-bottom: 1px solid #444;
+}
+
+.bb-price-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bb-price-title {
+  font-size: 2rem;
+  color: #F9B233;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.bb-price-subtitle {
+  font-size: 1.1rem;
+  color: #E85D04;
+  margin: 0 0 40px 0;
+  text-align: center;
+  font-weight: 500;
+}
+
+.bb-price-tiers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.bb-price-button {
+  background-color: #1a1a1a;
+  border: 2px solid #F9B233;
+  border-radius: 6px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bb-price-button:hover {
+  background-color: #333;
+  box-shadow: 0 0 12px rgba(249, 178, 51, 0.3);
+}
+
+.bb-price-button.selected {
+  background-color: #F9B233;
+  color: #1a1a1a;
+  box-shadow: 0 0 20px rgba(249, 178, 51, 0.5);
+}
+
+.bb-price-button.selected .bb-price-amount,
+.bb-price-button.selected .bb-price-unit {
+  color: #1a1a1a;
+}
+
+.bb-price-amount {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #F9B233;
+}
+
+.bb-price-unit {
+  font-size: 1.5rem;
+}
+
+/* ========== CUSTOM PRICE ========== */
+
+.bb-custom-price {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bb-custom-price-label {
+  font-size: 1rem;
+  color: #F9B233;
+  font-weight: 500;
+}
+
+.bb-custom-price-input {
+  padding: 12px 15px;
+  font-size: 1rem;
+  background-color: #2d2d2d;
+  border: 2px solid #F9B233;
+  border-radius: 4px;
+  color: #e0e0e0;
+  transition: border-color 0.3s ease;
+}
+
+.bb-custom-price-input:focus {
+  outline: none;
+  border-color: #E85D04;
+  box-shadow: 0 0 8px rgba(232, 93, 4, 0.3);
+}
+
+.bb-custom-price-input::placeholder {
+  color: #a0a0a0;
+}
+
+.bb-custom-price-display {
+  font-size: 1.2rem;
+  color: #E85D04;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ========== PURCHASE BUTTON ========== */
+
+.bb-purchase-button {
+  width: 100%;
+  padding: 18px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  background-color: #F9B233;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bb-purchase-button:hover:not(.disabled) {
+  background-color: #E85D04;
+  box-shadow: 0 4px 16px rgba(232, 93, 4, 0.4);
+  transform: translateY(-2px);
+}
+
+.bb-purchase-button.disabled {
+  background-color: #666;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
 /* ========== FOOTER ========== */
 
 .bb-footer {
@@ -397,8 +548,13 @@
   }
 
   .bb-details-title,
-  .bb-games-title {
+  .bb-games-title,
+  .bb-price-title {
     font-size: 1.4rem;
+  }
+
+  .bb-price-subtitle {
+    font-size: 0.95rem;
   }
 
   .bb-hero-section {
@@ -411,5 +567,27 @@
 
   .bb-stat-number {
     font-size: 2rem;
+  }
+
+  .bb-price-tiers {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .bb-price-button {
+    padding: 15px;
+  }
+
+  .bb-price-amount {
+    font-size: 1.4rem;
+  }
+
+  .bb-custom-price {
+    padding: 20px;
+  }
+
+  .bb-purchase-button {
+    padding: 15px 20px;
+    font-size: 1rem;
   }
 }
