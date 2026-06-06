@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import { useState, createContext, type Dispatch, type SetStateAction } from 'react';
 import { Header, Footer, PaperBubbleTrail, PaperBubbleFloat } from './shell/components.ts';
 import { TYPE_CONFIGS, THEMES } from './data/constants';
@@ -31,6 +31,10 @@ function App() {
   const [theme, setTheme] = useState(THEMES.FLOAT);
   const [filter, setFilter] = useState("");
   const [renderTime, setRenderTime] = useState(Date.now());
+  const location = useLocation();
+
+  // Check if we're on the bday-bundle route
+  const isBdayBundlePage = location.hash === '#/bday-bundle';
 
   const handleClick: React.MouseEventHandler<HTMLDivElement> = (event) => {
     const id = (event.target as HTMLElement | null)?.id ?? "";
@@ -47,11 +51,11 @@ function App() {
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className="page-wrapper fade-in" onClick={handleClick}>
-        <Header />
+        {!isBdayBundlePage && <Header />}
         <Outlet context={filter} />
-        <Footer />
+        {!isBdayBundlePage && <Footer />}
       </div>
-      <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />
+      {!isBdayBundlePage && <PaperCanvas theme={theme} filter={filter} renderTime={renderTime} />}
     </ThemeContext.Provider>
   )
 }
