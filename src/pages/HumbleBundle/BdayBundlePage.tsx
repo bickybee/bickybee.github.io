@@ -72,6 +72,9 @@ const BUNDLE_CONFIG = {
     },
   ],
 
+  // Price Tiers - Fixed prices in kisses
+  priceTiers: [5, 10, 25, 50],
+
   // Footer Section
   footerText: "Made with 💔 as a FAKE gift - Happy Birthday! (This is not a real Humble Bundle)",
   footerLinks: [
@@ -154,9 +157,32 @@ const GameCard = ({ game, isExpanded, onToggle }: GameCardProps) => {
 export function BdayBundlePage() {
   const [expandedGameId, setExpandedGameId] = useState<number | null>(null);
   const [expandedWhy, setExpandedWhy] = useState(false);
+  const [selectedPrice, setSelectedPrice] = useState<number | null>(null);
+  const [customPrice, setCustomPrice] = useState<string>('');
 
   const toggleGameExpand = (gameId: number) => {
     setExpandedGameId(expandedGameId === gameId ? null : gameId);
+  };
+
+  const handlePriceSelect = (price: number) => {
+    setSelectedPrice(price);
+    setCustomPrice(''); // Clear custom price when selecting a tier
+  };
+
+  const handleCustomPriceChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setCustomPrice(value);
+    if (value) {
+      setSelectedPrice(null); // Clear selected price tier when entering custom
+    }
+  };
+
+  const currentPrice = selectedPrice || (customPrice ? parseInt(customPrice) : null);
+
+  const handlePurchase = () => {
+    if (!currentPrice) return;
+    // TODO: Implement purchase logic
+    console.log(`Purchase attempted with ${currentPrice} kisses`);
   };
 
   return (
@@ -225,6 +251,53 @@ export function BdayBundlePage() {
               />
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Price Section */}
+      <section className="bb-price-section">
+        <div className="bb-price-container">
+          <h2 className="bb-price-title">Choose Your Price</h2>
+          <p className="bb-price-subtitle">Pay What You Want - Get All Games!</p>
+          
+          <div className="bb-price-tiers">
+            {BUNDLE_CONFIG.priceTiers.map((price) => (
+              <button
+                key={price}
+                className={`bb-price-button ${selectedPrice === price ? 'selected' : ''}`}
+                onClick={() => handlePriceSelect(price)}
+              >
+                <span className="bb-price-amount">{price}</span>
+                <span className="bb-price-unit">💋</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="bb-custom-price">
+            <label htmlFor="custom-price" className="bb-custom-price-label">
+              Or name your own price:
+            </label>
+            <input
+              id="custom-price"
+              type="number"
+              min="0"
+              value={customPrice}
+              onChange={handleCustomPriceChange}
+              placeholder="Enter number of kisses"
+              className="bb-custom-price-input"
+            />
+            {customPrice && (
+              <span className="bb-custom-price-display">{customPrice} 💋</span>
+            )}
+          </div>
+
+          <button
+            className={`bb-purchase-button ${!currentPrice ? 'disabled' : ''}`}
+            onClick={handlePurchase}
+            disabled={!currentPrice}
+          >
+            Get This Bundle for {currentPrice ? `${currentPrice} 💋` : 'Choose a Price'}
+          </button>
         </div>
       </section>
 
